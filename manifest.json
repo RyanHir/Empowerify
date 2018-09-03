@@ -1,0 +1,23 @@
+{
+
+  "manifest_version": 2,
+  "name": "Empowerify",
+  "version": "1.1",
+
+  "description": "Adds a (Do you want to leave?) to the school website, EMPOWER!!!!",
+
+  "icons": {
+    "48": "icons/icon.jpg"
+  },
+  "web_accessible_resources": [
+    "icons/Canvas-Logo.png"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://plano.empowerlearning.net/*"],
+      "js": ["empowerify.js"]
+    }
+  ]
+
+}

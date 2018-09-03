@@ -1,0 +1,1 @@
+This is a addon to enabe "Do you want to leave?" on our school website (Plano Academy Highschool uses plano.empowerlearning.net) which is notorious for users pressing the back button and leave the page by accident

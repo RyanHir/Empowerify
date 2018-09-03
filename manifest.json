@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "Empowerify",
-  "version": "1.1",
+  "version": "1.2",
 
   "description": "Adds a (Do you want to leave?) to the school website, EMPOWER!!!!",
 
@@ -15,7 +15,7 @@
 
   "content_scripts": [
     {
-      "matches": ["*://plano.empowerlearning.net/*"],
+      "matches": ["*://plano.empowerlearning.net/iFrame.aspx?iCtrl=*"],
       "js": ["empowerify.js"]
     }
   ]

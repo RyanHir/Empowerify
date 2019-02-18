@@ -1,35 +1,33 @@
 var redirect = true;
 var goBack   = true;
 
-
 chrome.storage.sync.get({
     redirect: true,
-    goBack: true
+    goBack:   true,
 }, function(items) {
     redirect = items.redirect;
     goBack   = items.goBack;
 });
 
 
-
 function checkIfNewEmpower(){
 	chrome.storage.sync.get({
 	    redirect: true,
-	    goBack: true
+	    goBack: true,
 	}, function(items) {
 	    redirect = items.redirect;
 	    goBack   = items.goBack;
 	});
 	if (redirect == true) {
 		if (window.location.search == "?iCtrl=STUDENT_BASE_HOME_CONTROL") {
-			window.location.replace('https://plano.empowerlearning.net/iFrame.aspx?iCtrl=PLAYLIST_HOME_CLASS');
+			window.location.search = "?iCtrl=PLAYLIST_HOME_CLASS";
 		}
 	}
 }
 function closingCode(){
 	chrome.storage.sync.get({
 	    redirect: true,
-	    goBack: true
+	    goBack: true,
 	}, function(items) {
 	    redirect = items.redirect;
 	    goBack   = items.goBack;

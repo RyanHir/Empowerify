@@ -3,25 +3,22 @@
   "manifest_version": 2,
   "name": "Empowerify",
   "options_page": "options.html",
-  "version": "1.4",
+  "version": "1.4.1",
 
-  "description": "Adds a (Do you want to leave? and Redirect to old) to the school website, EMPOWER!!!!",
+  "description": "This tool adds a (Do you want to leave? and Redirect to old) to a new school website empower.",
 
-  "permissions": ["storage"],
+  "permissions": [
+	  "storage"
+  ],
   "options_ui": {
-    "page": "options.html",
-    "open_in_tab": false
+    "page": "options.html"
   },
   "icons": {
-    "48": "icons/icon.jpg"
+    "48": "icons/icon.png"
   },
-  "web_accessible_resources": [
-    "icons/Canvas-Logo.png"
-  ],
-
   "content_scripts": [
     {
-      "matches": ["*://plano.empowerlearning.net/iFrame.aspx?iCtrl=*"],
+      "matches": ["https://*.empowerlearning.net/iFrame.aspx?iCtrl=*"],
       "js": ["empowerify.js"]
     }
   ]

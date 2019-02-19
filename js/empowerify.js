@@ -1,7 +1,7 @@
 var redirect = true;
 var goBack   = true;
 
-chrome.storage.sync.get({
+chrome.storage.local.get({
     redirect: true,
     goBack:   true,
 }, function(items) {
@@ -11,7 +11,7 @@ chrome.storage.sync.get({
 
 
 function checkIfNewEmpower(){
-	chrome.storage.sync.get({
+	chrome.storage.local.get({
 	    redirect: true,
 	    goBack: true,
 	}, function(items) {
@@ -25,7 +25,7 @@ function checkIfNewEmpower(){
 	}
 }
 function closingCode(){
-	chrome.storage.sync.get({
+	chrome.storage.local.get({
 	    redirect: true,
 	    goBack: true,
 	}, function(items) {

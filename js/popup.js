@@ -3,7 +3,7 @@ function save_options() {
   var redirect = document.getElementById('redirect').checked;
   var goBack =   document.getElementById('goBack').checked;
 
-  chrome.storage.sync.set({
+  chrome.storage.local.set({
     redirect: redirect,
     goBack:   goBack,
   }, function() {
@@ -19,7 +19,7 @@ function save_options() {
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
 function restore_options() {
-  chrome.storage.sync.get({
+  chrome.storage.local.get({
     redirect: true,
     goBack:   true,
   }, function(items) {

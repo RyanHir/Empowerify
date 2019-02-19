@@ -15,5 +15,4 @@ Downloads
 
 [Chrome](https://chrome.google.com/webstore/detail/empowerify/eijoagbdkjifbgbkhebmdpaofdmniomg)
 
-[Firefox](https://github.com/RyanHir/Empowerify/releases) 
-(This is a self signed package, you will have to install this manually)
+[Firefox](https://github.com/RyanHir/Empowerify/releases/download/1.4.4/empowerify-1.4.4-fx.xpi`) 

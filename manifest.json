@@ -22,7 +22,7 @@
   "content_scripts": [
     {
       "matches": ["https://*.empowerlearning.net/iFrame.aspx?iCtrl=*"],
-      "js": ["empowerify.js"]
+      "js": ["js/empowerify.js"]
     }
   ]
 

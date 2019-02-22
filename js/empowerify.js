@@ -1,12 +1,14 @@
 var redirect = true;
 var goBack   = true;
-
+var dark     = true;
 chrome.storage.local.get({
     redirect: true,
     goBack:   true,
+    dark:     false,
 }, function(items) {
     redirect = items.redirect;
     goBack   = items.goBack;
+    dark     = items.dark;
 });
 
 
@@ -14,9 +16,11 @@ function checkIfNewEmpower(){
 	chrome.storage.local.get({
 	    redirect: true,
 	    goBack: true,
+	    dark: false,
 	}, function(items) {
 	    redirect = items.redirect;
 	    goBack   = items.goBack;
+	    darl     = items.dark;
 	});
 	if (redirect == true) {
 		if (window.location.search == "?iCtrl=STUDENT_BASE_HOME_CONTROL") {
@@ -28,9 +32,11 @@ function closingCode(){
 	chrome.storage.local.get({
 	    redirect: true,
 	    goBack: true,
+	    dark: false,
 	}, function(items) {
 	    redirect = items.redirect;
 	    goBack   = items.goBack;
+	    dark     = items.dark;
 	});
 	var message = "Are you sure you want to navigate away from this page?\n\nYou have started writing or editing a post.\n\nPress OK to continue or Cancel to stay on the current page.";
 	
@@ -39,5 +45,27 @@ function closingCode(){
 		return false;
 	}
 }
+function darkMode(){
+	chrome.storage.local.get({
+	    redirect: true,
+	    goBack: true,
+	    dark: false,
+	}, function(items) {
+	    redirect = items.redirect;
+	    goBack   = items.goBack;
+	    dark     = items.dark;
+	});
+	if (dark == true) {
+		$('td').css('background', '#33383b');
+		$('#side_bar').css('background', '#33383b');
+		$('div').css('color', 'white');
+		$('#totalMessages').css('color', '#33383b');
+		$('#ph_class_img_txt').css('color', '#33383b');
+	}
+}
+function theOnLoad(){
+	checkIfNewEmpower();
+	darkMode();
+}
 window.onbeforeunload = closingCode;
-window.onload = checkIfNewEmpower;
+window.onload = theOnLoad;

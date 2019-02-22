@@ -2,10 +2,12 @@
 function save_options() {
   var redirect = document.getElementById('redirect').checked;
   var goBack =   document.getElementById('goBack').checked;
+  var dark =     document.getElementById('dark').checked;
 
   chrome.storage.local.set({
     redirect: redirect,
     goBack:   goBack,
+    dark:     dark,
   }, function() {
     // Update status to let user know options were saved.
     var status = document.getElementById('status');
@@ -22,9 +24,11 @@ function restore_options() {
   chrome.storage.local.get({
     redirect: true,
     goBack:   true,
+    dark:     false,
   }, function(items) {
     document.getElementById('redirect').checked		= items.redirect;
     document.getElementById('goBack').checked		= items.goBack;
+    document.getElementById('dark').checked		= items.dark;
   });
 }
 document.addEventListener('DOMContentLoaded', restore_options);

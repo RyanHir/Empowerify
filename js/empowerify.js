@@ -62,7 +62,7 @@ function darkMode(){
 		$('#totalMessages').css('color', '#33383b');
 		$('#ph_class_img_txt').css('color', '#33383b');
 		$('.loading_popup').css('background', '#596167');
-		$('.loading_popup').css('border', '#7f868a');
+		$('.loading_popup').css('border', '2px solid #7f868a');
 	}
 }
 function theOnLoad(){

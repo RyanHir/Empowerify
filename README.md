@@ -15,4 +15,4 @@ Downloads
 
 [Chrome](https://chrome.google.com/webstore/detail/empowerify/eijoagbdkjifbgbkhebmdpaofdmniomg)
 
-[Firefox](https://github.com/RyanHir/Empowerify/releases/download/1.4.4/empowerify-1.4.4-fx.xpi) 
+[Firefox(https://github.com/RyanHir/Empowerify/releases/download/master/empowerify-1.9.2.1-fx.xpi)

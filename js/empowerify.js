@@ -1,27 +1,21 @@
 var redirect = true;
 var goBack   = true;
 var dark     = true;
-chrome.storage.local.get({
-    redirect: true,
-    goBack:   true,
-    dark:     false,
-}, function(items) {
-    redirect = items.redirect;
-    goBack   = items.goBack;
-    dark     = items.dark;
-});
+function getData(){
+	chrome.storage.local.get({
+		redirect: true,
+		goBack:   true,
+		dark:     false,
+	}, function(items) {
+		redirect = items.redirect;
+		goBack   = items.goBack;
+		dark     = items.dark;
+	});
+}
 
 
 function checkIfNewEmpower(){
-	chrome.storage.local.get({
-	    redirect: true,
-	    goBack: true,
-	    dark: false,
-	}, function(items) {
-	    redirect = items.redirect;
-	    goBack   = items.goBack;
-	    darl     = items.dark;
-	});
+	getData();
 	if (redirect == true) {
 		if (window.location.search == "?iCtrl=STUDENT_BASE_HOME_CONTROL") {
 			window.location.search = "?iCtrl=PLAYLIST_HOME_CLASS";
@@ -29,15 +23,7 @@ function checkIfNewEmpower(){
 	}
 }
 function closingCode(){
-	chrome.storage.local.get({
-	    redirect: true,
-	    goBack: true,
-	    dark: false,
-	}, function(items) {
-	    redirect = items.redirect;
-	    goBack   = items.goBack;
-	    dark     = items.dark;
-	});
+	getData();
 	var message = "Are you sure you want to navigate away from this page?\n\nYou have started writing or editing a post.\n\nPress OK to continue or Cancel to stay on the current page.";
 	
 	if (goBack == true) {
@@ -46,15 +32,7 @@ function closingCode(){
 	}
 }
 function darkMode(){
-	chrome.storage.local.get({
-	    redirect: true,
-	    goBack: true,
-	    dark: false,
-	}, function(items) {
-	    redirect = items.redirect;
-	    goBack   = items.goBack;
-	    dark     = items.dark;
-	});
+	getData();
 	if (dark == true) {
 		$('.drag_out td').css('background', '#33383b');
 		$('div').css('color', '#E0E0E0');

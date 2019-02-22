@@ -2,9 +2,11 @@
 
   "manifest_version": 2,
   "name": "Empowerify",
-  "version": "1.9",
+  "version": "1.9.1",
 
   "description": "This tool adds a (Do you want to leave? and Redirect to old) to a new school website empower.",
+
+  "default_icon": "icons/icon.png",
 
   "permissions": [
 	  "storage"

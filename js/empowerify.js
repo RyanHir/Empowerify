@@ -40,7 +40,7 @@ function darkMode(){
 		$('.ph_class_img_txt').css('color', '#33383b');
 		$('.ph_class_name').css('color', '#E0E0E0');
 		$('.ph_main_out').css('background', '#33383b');
-    $('.loading_popup').css('background', '#596167');
+		$('.loading_popup').css('background', '#596167');
 		$('.loading_popup').css('border', '2px solid #7f868a');
 	}
 }

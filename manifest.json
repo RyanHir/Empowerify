@@ -6,7 +6,7 @@
 
   "description": "This tool adds a (Do you want to leave? and Redirect to old) to a new school website empower.",
 
-  "default_icon": "icons/icon.png",
+  "icons": {"128": "icons/icon.png"},
 
   "permissions": [
 	  "storage"

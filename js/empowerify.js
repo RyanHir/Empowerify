@@ -1,6 +1,7 @@
-var redirect = true;
-var goBack   = true;
-var dark     = true;
+var redirect	= true;
+var goBack	= true;
+var dark	= true;
+
 function getData(){
 	chrome.storage.local.get({
 		redirect: true,
@@ -12,7 +13,6 @@ function getData(){
 		dark     = items.dark;
 	});
 }
-
 
 function checkIfNewEmpower(){
 	getData();
@@ -38,10 +38,14 @@ function darkMode(){
 		$('div').css('color', '#E0E0E0');
 		$('.totalMessages').css('color', '#33383b');
 		$('.ph_class_img_txt').css('color', '#33383b');
-		$('.ph_class_name').css('color', '#E0E0E0');
 		$('.ph_main_out').css('background', '#33383b');
 		$('.loading_popup').css('background', '#596167');
 		$('.loading_popup').css('border', '2px solid #7f868a');
+		$('.ph_round_right').css('color', '#596167');
+		$('.ph_class_name').css('color', '#E0E0E0');
+		$('.ph_class_img_outer2').css('background', '#596167');
+		$('.ph_title').css('color', '#898b8e');
+		$('#PlaylistMainarea').css('background', '#33383b');
 	}
 }
 function theOnLoad(){
@@ -49,4 +53,5 @@ function theOnLoad(){
 	darkMode();
 }
 window.onbeforeunload = closingCode;
-window.onload = theOnLoad;
+$( document ).ready(theOnLoad);
+$('*').on('load change click dblclick  hover keydown keypress keyup load mousedown mouseenter mouseleave mousemove mouseout mouseover mouseup resize scroll select', theOnLoad);

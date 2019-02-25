@@ -44,8 +44,12 @@ function darkMode(){
 		$('.ph_round_right').css('color', '#596167');
 		$('.ph_class_name').css('color', '#E0E0E0');
 		$('.ph_class_img_outer2').css('background', '#596167');
+		$('.ph_class_img_outer:last-child').css('background', '#596167');
 		$('.ph_title').css('color', '#898b8e');
 		$('#PlaylistMainarea').css('background', '#33383b');
+		$('html').css('background', '#33383b');
+		$('.bgrep').css('background', '#33383b');
+		$('.edu_popup').css('background', '#33383b');
 	}
 }
 function theOnLoad(){

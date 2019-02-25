@@ -1,6 +1,6 @@
 var redirect	= true;
 var goBack	= true;
-var dark	= true;
+var dark	= false;
 
 function getData(){
 	chrome.storage.local.get({

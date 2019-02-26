@@ -29,8 +29,8 @@ function restore_options() {
     redirect: true,
     goBack:   true,
     dark:     false,
-    colorOne: #ffffff,
-    colorTwo: #ffffff,
+    colorOne: "#ffffff",
+    colorTwo: "#ffffff",
   }, function(items) {
     document.getElementById('redirect').checked		= items.redirect;
     document.getElementById('goBack').checked		= items.goBack;

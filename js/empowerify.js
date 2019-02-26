@@ -1,16 +1,27 @@
 var redirect	= true;
 var goBack	= true;
 var dark	= false;
-
+var custom 	= false;
+var colorOne 	= "#ffffff";
+var colorTwo 	= "#ffffff";
+    
+    
 function getData(){
 	chrome.storage.local.get({
 		redirect: true,
 		goBack:   true,
 		dark:     false,
+		custom:   false,
+		colorOne: "#ffffff",
+		colorTwo: "#ffffff",
 	}, function(items) {
 		redirect = items.redirect;
 		goBack   = items.goBack;
 		dark     = items.dark;
+		custom	 = items.custom;
+		colorOne = items.colorOne;
+		colorTwo = items.colorTwo;
+		
 	});
 }
 

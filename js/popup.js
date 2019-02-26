@@ -3,6 +3,7 @@ function save_options() {
   var redirect = document.getElementById('redirect').checked;
   var goBack =   document.getElementById('goBack').checked;
   var dark =     document.getElementById('dark').checked;
+  var custom =   document.getElementById('custom').checked;
   var colorOne = document.getElementById('colorPicker1').value;
   var colorTwo = document.getElementById('colorPicker2').value;
 
@@ -10,8 +11,9 @@ function save_options() {
     redirect: redirect,
     goBack:   goBack,
     dark:     dark,
-    colorOne: colorOne;
-    colorTwo: colorTwo;
+    custom:   custom,
+    colorOne: colorOne,
+    colorTwo: colorTwo,
   }, function() {
     // Update status to let user know options were saved.
     var status = document.getElementById('status');
@@ -29,12 +31,14 @@ function restore_options() {
     redirect: true,
     goBack:   true,
     dark:     false,
+    custom:   false,
     colorOne: "#ffffff",
     colorTwo: "#ffffff",
   }, function(items) {
-    document.getElementById('redirect').checked		= items.redirect;
-    document.getElementById('goBack').checked		= items.goBack;
-    document.getElementById('dark').checked		= items.dark;
+    document.getElementById('redirect').checked =   items.redirect;
+    document.getElementById('goBack').checked	=     items.goBack;
+    document.getElementById('dark').checked	=       items.dark;
+    document.getElementById('custom').checked =     items.custom;
     document.getElementById('colorPicker1').value = items.colorOne;
     document.getElementById('colorPicker1').value = items.colorTwo;
   });

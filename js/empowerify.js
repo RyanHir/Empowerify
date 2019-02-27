@@ -61,7 +61,7 @@ function darkMode(){
 		$('html').css('background', '#33383b');
 		$('.bgrep').css('background', '#33383b');
 		$('.edu_popup').css('background', '#33383b');
-	} else if(custom == true) {
+	} else {
 		$('.drag_out td').css('background', colorOne);
 		$('div').css('color', '#E0E0E0');
 		$('.totalMessages').css('color', colorTwo);

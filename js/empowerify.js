@@ -33,23 +33,29 @@ function closingCode(){
 }
 function darkMode(){
 	getData();
+	var color1 = "#33383b";
+	var color2 = "#596167";
+	var color3 = "#E0E0E0";
+	var color4 = "#596167";
+	var color5 = "#7f868a";
+
 	if (dark == true) {
-		$('.drag_out td').css('background', '#33383b');
-		$('div').css('color', '#E0E0E0');
-		$('.totalMessages').css('color', '#33383b');
-		$('.ph_class_img_txt').css('color', '#33383b');
-		$('.ph_main_out').css('background', '#33383b');
-		$('.loading_popup').css('background', '#596167');
-		$('.loading_popup').css('border', '2px solid #7f868a');
-		$('.ph_round_right').css('color', '#596167');
-		$('.ph_class_name').css('color', '#E0E0E0');
-		$('.ph_class_img_outer2').css('background', '#596167');
-		$('.ph_class_img_outer:last-child').css('background', '#596167');
+		$('.drag_out td').css('background', color1);
+		$('div').css('color', color3);
+		$('.totalMessages').css('color', color1);
+		$('.ph_class_img_txt').css('color', color1);
+		$('.ph_main_out').css('background', color1);
+		$('.loading_popup').css('background', color4);
+		$('.loading_popup').css('border', '2px solidi' + color5);
+		$('.ph_round_right').css('color', color4);
+		$('.ph_class_name').css('color', color3);
+		$('.ph_class_img_outer2').css('background', color2);
+		$('.ph_class_img_outer:last-child').css('background', color2);
 		$('.ph_title').css('color', '#898b8e');
-		$('#PlaylistMainarea').css('background', '#33383b');
-		$('html').css('background', '#33383b');
-		$('.bgrep').css('background', '#33383b');
-		$('.edu_popup').css('background', '#33383b');
+		$('#PlaylistMainarea').css('background', color1);
+		$('html').css('background', color1);
+		$('.bgrep').css('background', color1);
+		$('.edu_popup').css('background', color1);
 	}
 }
 function theOnLoad(){

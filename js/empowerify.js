@@ -1,5 +1,5 @@
-var redirect	= true;
-var goBack	= true;
+var redirect	= false;
+var goBack	= false;
 var dark	= false;
 var custom 	= false;
 var colorOne 	= "#ffffff";

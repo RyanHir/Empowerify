@@ -40,7 +40,7 @@ function restore_options() {
     document.getElementById('dark').checked	=       items.dark;
     document.getElementById('custom').checked =     items.custom;
     document.getElementById('colorPicker1').value = items.colorOne;
-    document.getElementById('colorPicker1').value = items.colorTwo;
+    document.getElementById('colorPicker2').value = items.colorTwo;
   });
 }
 document.addEventListener('DOMContentLoaded', restore_options);

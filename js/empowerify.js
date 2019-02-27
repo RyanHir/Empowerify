@@ -62,27 +62,29 @@ function darkMode(){
 		$('.bgrep').css('background', '#33383b');
 		$('.edu_popup').css('background', '#33383b');
 	} else {
-		$('.drag_out td').css('background', colorOne);
-		$('div').css('color', '#E0E0E0');
-		$('.totalMessages').css('color', colorTwo);
-		$('.ph_class_img_txt').css('color', colorTwo);
-		$('.ph_main_out').css('background', colorOne);
-		$('.loading_popup').css('background', colorOne);
-		$('.loading_popup').css('border', "2px solid" + colorTwo);
-		$('.ph_round_right').css('color', colorTwo);
-		$('.ph_class_name').css('color', colorTwo);
-		$('.ph_class_img_outer2').css('background', colorOne);
-		$('.ph_class_img_outer:last-child').css('background', colorOne);
-		$('.ph_title').css('color', colorTwo);
-		$('#PlaylistMainarea').css('background', colorOne);
-		$('html').css('background', colorOne);
-		$('.bgrep').css('background', colorOne);
-		$('.edu_popup').css('background', colorOne);
+		
 	}
 }
 function theOnLoad(){
 	checkIfNewEmpower();
-	darkMode();
+// 	darkMode();
+	getData();
+	$('.drag_out td').css('background', colorOne);
+	$('div').css('color', '#E0E0E0');
+	$('.totalMessages').css('color', colorTwo);
+	$('.ph_class_img_txt').css('color', colorTwo);
+	$('.ph_main_out').css('background', colorOne);
+	$('.loading_popup').css('background', colorOne);
+	$('.loading_popup').css('border', "2px solid" + colorTwo);
+	$('.ph_round_right').css('color', colorTwo);
+	$('.ph_class_name').css('color', colorTwo);
+	$('.ph_class_img_outer2').css('background', colorOne);
+	$('.ph_class_img_outer:last-child').css('background', colorOne);
+	$('.ph_title').css('color', colorTwo);
+	$('#PlaylistMainarea').css('background', colorOne);
+	$('html').css('background', colorOne);
+	$('.bgrep').css('background', colorOne);
+	$('.edu_popup').css('background', colorOne);
 }
 window.onbeforeunload = closingCode;
 $( document ).ready(theOnLoad);

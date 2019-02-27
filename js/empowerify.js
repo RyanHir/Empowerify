@@ -68,7 +68,7 @@ function darkMode(){
 		$('.ph_class_img_txt').css('color', colorTwo);
 		$('.ph_main_out').css('background', colorOne);
 		$('.loading_popup').css('background', colorOne);
-		$('.loading_popup').css('border', 2px solid colorTwo);
+		$('.loading_popup').css('border', "2px solid" + colorTwo);
 		$('.ph_round_right').css('color', colorTwo);
 		$('.ph_class_name').css('color', colorTwo);
 		$('.ph_class_img_outer2').css('background', colorOne);

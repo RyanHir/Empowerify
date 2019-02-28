@@ -62,6 +62,7 @@ function darkMode(){
 		$('.bgrep').css('background', '#33383b');
 		$('.edu_popup').css('background', '#33383b');
 	} else {
+		console.log("RUN FROM EMPOWA");
 	}
 }
 function theOnLoad(){

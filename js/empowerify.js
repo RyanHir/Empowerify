@@ -62,7 +62,6 @@ function darkMode(){
 		$('.bgrep').css('background', '#33383b');
 		$('.edu_popup').css('background', '#33383b');
 	} else {
-		
 	}
 }
 function theOnLoad(){
@@ -73,13 +72,13 @@ function theOnLoad(){
 	$('div').css('color', '#E0E0E0');
 	$('.totalMessages').css('color', colorTwo);
 	$('.ph_class_img_txt').css('color', colorTwo);
-	$('.ph_main_out').css('background', colorOne);
-	$('.loading_popup').css('background', colorOne);
-	$('.loading_popup').css('border', "2px solid" + colorTwo);
+	$('.ph_main_out').css('background', colorTwo);
+	$('.loading_popup').css('background', colorTwo);
+	$('.loading_popup').css('border', "2px solid" + colorOne);
 	$('.ph_round_right').css('color', colorTwo);
 	$('.ph_class_name').css('color', colorTwo);
-	$('.ph_class_img_outer2').css('background', colorOne);
-	$('.ph_class_img_outer:last-child').css('background', colorOne);
+	$('.ph_class_img_outer2').css('background', colorTwo);
+	$('.ph_class_img_outer:last-child').css('background', colorTwo);
 	$('.ph_title').css('color', colorTwo);
 	$('#PlaylistMainarea').css('background', colorOne);
 	$('html').css('background', colorOne);

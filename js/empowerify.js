@@ -64,4 +64,4 @@ function theOnLoad(){
 }
 window.onbeforeunload = closingCode;
 $( document ).ready(theOnLoad);
-$('*').on('load change click dblclick  hover keydown keypress keyup load mousedown mouseenter mouseleave mousemove mouseout mouseover mouseup resize scroll select', theOnLoad);
+//$('*').on('load change click dblclick  hover keydown keypress keyup load mousedown mouseenter mouseleave mousemove mouseout mouseover mouseup resize scroll select', theOnLoad);

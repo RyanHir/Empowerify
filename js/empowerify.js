@@ -59,9 +59,12 @@ function darkMode(){
 	}
 }
 function theOnLoad(){
+	getData();
 	checkIfNewEmpower();
 	darkMode();
 }
 window.onbeforeunload = closingCode;
+window.onload =	theOnLoad;
+window.onchange = theOnLoad;
 $( document ).ready(theOnLoad);
-//$('*').on('load change click dblclick  hover keydown keypress keyup load mousedown mouseenter mouseleave mousemove mouseout mouseover mouseup resize scroll select', theOnLoad);
+$('html').bind('DOMSubtreeModified',theOnLoad);

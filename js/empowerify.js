@@ -33,29 +33,31 @@ function closingCode(){
 }
 function darkMode(){
 	getData();
-	var color1 = "#33383b";
-	var color2 = "#596167";
-	var color3 = "#E0E0E0";
-	var color4 = "#596167";
-	var color5 = "#7f868a";
+
+	var background1 = "#33383b"; //background
+	var background2 = "#596167"; //foreground
+
+	var color1 = "#33383b"; //background
+	var color2 = "#E0E0E0"; //foreground
 
 	if (dark == true) {
-		$('.drag_out td').css('background', color1);
-		$('div').css('color', color3);
-		$('.totalMessages').css('color', color1);
-		$('.ph_class_img_txt').css('color', color1);
-		$('.ph_main_out').css('background', color1);
-		$('.loading_popup').css('background', color4);
-		$('.loading_popup').css('border', '2px solidi' + color5);
-		$('.ph_round_right').css('color', color4);
-		$('.ph_class_name').css('color', color3);
-		$('.ph_class_img_outer2').css('background', color2);
-		$('.ph_class_img_outer:last-child').css('background', color2);
-		$('.ph_title').css('color', '#898b8e');
-		$('#PlaylistMainarea').css('background', color1);
-		$('html').css('background', color1);
-		$('.bgrep').css('background', color1);
-		$('.edu_popup').css('background', color1);
+		$('.drag_out td').css('background',		background1);
+		$('#PlaylistMainarea').css('background',	background1);
+		$('html').css('background',			background1);
+		$('.bgrep').css('background',			background1);
+		$('.edu_popup').css('background',		background1);
+		$('.ph_main_out').css('background',		background1);
+		$('.loading_popup').css('background',		background2);
+		$('.ph_class_img_outer2').css('background',	background2);
+		$('.ph_class_img_outer:last-child').css('background', background2);
+		
+		$('div').css('color',				color2);
+		$('.loading_popup').css('border', '2px solid' + color1);
+		$('.ph_class_img_txt').css('color',		color1);
+		$('.ph_round_right').css('color',		color1);
+		$('.totalMessages').css('color',		color1);
+		$('.ph_class_name').css('color',		color2);
+		$('.ph_title').css('color',			color2);
 	}
 }
 function theOnLoad(){

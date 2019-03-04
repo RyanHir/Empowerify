@@ -51,13 +51,19 @@ function darkMode(){
 		$('.ph_class_img_outer2').css('background',	background2);
 		$('.ph_class_img_outer:last-child').css('background', background2);
 		
-		$('div').css('color',				color2);
-		$('.loading_popup').css('border', '2px solid' + color1);
+		$('.loading_popup').css('border', '2px solid '+ color1);
 		$('.ph_class_img_txt').css('color',		color1);
 		$('.ph_round_right').css('color',		color1);
 		$('.totalMessages').css('color',		color1);
+		$('.white_content').css('color',		color1);
+		$('.loading_popup').css('color',		color2);
 		$('.ph_class_name').css('color',		color2);
 		$('.ph_title').css('color',			color2);
+		$('.ph_class_img_txt span').css('color',	color2);
+		$('.ph_class_name span').css('color',		color2);
+
+		$('.content').css('height',			"100%");
+		$('.left_column').css('box-shadow',		"none");
 	}
 }
 function theOnLoad(){

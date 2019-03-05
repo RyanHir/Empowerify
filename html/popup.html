@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head><title>Empowerify</title></head>
+<link rel="stylesheet" type="text/css" href="reset.css">
 <style>
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 body {
-	width: 250px;
+	width: auto;
+	white-space:nowrap;
+	margin: 5px;
 }
 .center {
 	text-align: center;
@@ -11,6 +15,17 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+* {
+	font-family: 'Roboto', sans-serif;
+}
+#save {
+	background-color: #e7e7e7;
+	color: black;
+	border: none;
+	padding: 5px 7px;
+	text-align: center;
+	text-decoration: none;
 }
 </style>
 
@@ -25,14 +40,6 @@ body {
 	<input type="checkbox" id="goBack">Go Back Catcher</input>
 	<br>
 	<input type="checkbox" id="dark">Experimental: Dark Mode</input>
-	<br>
-	<br>
-	Über Experimental: PERSONALIZED THEMES	
-	<input type="checkbox" id="custom">Experimental: Enable custom Colors</input>
-	<br>
-	<input type="color" id="colorPicker1">Color One</input>	
-	<br>	
-	<input type="color" id="colorPicker2">Color Two</input>	
 	<br>
 	<br>
 	<div id="status" class="center">Click Save</div>

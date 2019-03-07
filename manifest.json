@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "Empowerify",
-  "version": "1.9.4.2",
+  "version": "1.9.4.3",
 
   "description": "This tool adds a (Do you want to leave? and Redirect to old) to a new school website empower.",
 
@@ -23,6 +23,10 @@
     {
       "matches": ["https://*.empowerlearning.net/iFrame.aspx?iCtrl=*"],
       "js": ["js/jquery-3.3.1.min.js","js/empowerify.js"]
+    },
+    {
+      "matches": ["https://*.empowerlearning.net/default.aspx?LOAD_PAGE=*"],
+      "js": ["js/jquery-3.3.1.min.js","js/login.js"]
     }
   ]
 

@@ -7,7 +7,9 @@
 	{ "version": "1.9.4.4",
           "update_link": "https://github.com/RyanHir/Empowerify/releases/download/1.9.4.4/empowerify-1.9.4.4-fx.xpi"},
 	{ "version": "1.9.4.5",
-          "update_link": "https://github.com/RyanHir/Empowerify/releases/download/1.9.4.5/empowerify-1.9.4.5-fx.xpi"}
+          "update_link": "https://github.com/RyanHir/Empowerify/releases/download/1.9.4.5/empowerify-1.9.4.5-fx.xpi"},
+	{ "version": "1.9.4.6",
+          "update_link": "https://github.com/RyanHir/Empowerify/releases/download/1.9.4.6/empowerify-1.9.4.6-fx.xpi"}
       ]
     }
   }

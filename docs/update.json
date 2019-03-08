@@ -3,10 +3,9 @@
     "{7aaa1bc2-4aba-4039-a1fe-2ebd4fe52dbc}": {
       "updates": [
         { "version": "1.9.4.3",
-          "update_link": "https://github.com/RyanHir/Empowerify/releases/download/1.9.4.3/empowerify-1.9.4.3-fx.xpi",
-          "applications": {
-            "gecko": { "strict_min_version": "44" } 
-	  } 
+          "update_link": "https://github.com/RyanHir/Empowerify/releases/download/1.9.4.3/empowerify-1.9.4.3-fx.xpi"},
+	{ "version": "1.9.4.4",
+          "update_link": "https://github.com/RyanHir/Empowerify/releases/download/1.9.4.3/empowerify-1.9.4.3-fx.xpi"}
 	}
       ]
     }

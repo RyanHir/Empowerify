@@ -49,6 +49,7 @@ function darkMode(){
 		$('.bgrep').css('background',				background1);
 		$('.edu_popup').css('background',			background1);
 		$('.ph_main_out').css('background',			background1);
+		$('.student_vw_step3_innn').css('background',		background1);
 		$('.loading_popup').css('background',			background2);
 		$('.hybrid_inn_bp').css('background',			background2);
 		$('.ph_class_img_outer2').css('background',		background2);

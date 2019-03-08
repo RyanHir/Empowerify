@@ -28,6 +28,11 @@
       "matches": ["https://*.empowerlearning.net/default.aspx?LOAD_PAGE=*"],
       "js": ["js/jquery-3.3.1.min.js","js/login.js"]
     }
-  ]
+  ],
+  "applications": {
+    "gecko": {
+      "update_url": "https://example.com/updates.json"
+    }
+  }
 
 }

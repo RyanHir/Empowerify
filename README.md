@@ -1,4 +1,4 @@
-This addon is to allow for a slight modification to the website 
+\his addon is to allow for a slight modification to the website 
 "empowerlearning.net" and is meant to be an improvement to the end user.
 
 This addon was just for one school but has branched to 
@@ -15,4 +15,4 @@ Downloads
 
 [Chrome](https://chrome.google.com/webstore/detail/empowerify/eijoagbdkjifbgbkhebmdpaofdmniomg)
 
-[Firefox](https://github.com/RyanHir/Empowerify/releases/download/1.9.3.5/empowerify-1.9.3.5-fx.xpi)
+[Firefox](https://github.com/RyanHir/Empowerify/releases)

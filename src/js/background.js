@@ -24,13 +24,3 @@ chrome.tabs.onUpdated.addListener(function(tab) {
 		}); 
 	}
 });
-
-chrome.tabs.onRemoved.addListener(function() {
-	getData();
-	var message = "Are you sure you want to navigate away from this page?\n\nPress OK to continue or Cancel to stay on the current page.";
-	
-	if (goBack == true) {
-		if (confirm(message)) return true;
-		return false;
-	}
-});

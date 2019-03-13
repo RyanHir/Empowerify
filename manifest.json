@@ -2,31 +2,34 @@
 
   "manifest_version": 2,
   "name": "Empowerify",
-  "version": "1.9.4.6",
+  "version": "1.9.4.7",
 
   "description": "This tool adds a (Do you want to leave? and Redirect to old) to a new school website empower.",
 
   "icons": {
-	  "128": "icons/icon.png"
+	  "128": "src/icons/icon.png"
   },
-
+  "background": {
+    "scripts": ["src/js/background.js"]
+  },
   "permissions": [
-	  "storage"
+	  "storage",
+	  "https://*.empowerlearning.net/*"
   ],
   "options_ui": {
-    "page": "html/options.html"
+    "page": "src/html/options.html"
   },
   "browser_action": {
-    "default_popup": "html/popup.html"
+    "default_popup": "src/html/popup.html"
   },
   "content_scripts": [
     {
       "matches": ["https://*.empowerlearning.net/iFrame.aspx?iCtrl=*"],
-      "js": ["js/jquery-3.3.1.min.js","js/empowerify.js"]
+      "js": ["src/js/jquery-3.3.1.min.js","src/js/empowerify.js"]
     },
     {
       "matches": ["https://*.empowerlearning.net/default.aspx?LOAD_PAGE=*"],
-      "js": ["js/jquery-3.3.1.min.js","js/login.js"]
+      "js": ["src/js/jquery-3.3.1.min.js","src/js/login.js"]
     }
   ],
   "applications": {

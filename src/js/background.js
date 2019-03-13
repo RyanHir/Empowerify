@@ -19,7 +19,7 @@ chrome.tabs.onUpdated.addListener(function(tab) {
 	getData();
 	if (dark == true) {
 		chrome.tabs.insertCSS({
-			file: '/css/inject/darkOld.css',
+			file: '/src/css/inject/darkOld.css',
 			allFrames: true
 		}); 
 	}

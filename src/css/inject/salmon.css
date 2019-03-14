@@ -1,8 +1,8 @@
 :root {
-	--backgroundOne: #33383b;
-	--backgroundTwo: #596167;
-	--colorOne:	 #33383b;
-	--colorTwo:	 #E0E0E0;
+	--backgroundOne: #FA8072;
+	--backgroundTwo: #73ECFA;
+	--colorOne:	 #FAC473;
+	--colorTwo:	 #FA73A9;
 }
 
 .drag_out td				{background: var(--backgroundOne) !important}
@@ -14,6 +14,7 @@ html					{background: var(--backgroundOne) !important}
 .edu_popup				{background: var(--backgroundOne) !important}
 .ph_main_out				{background: var(--backgroundOne) !important}
 .student_vw_stemp3_innn			{background: var(--backgroundOne) !important}
+.content				{background: var(--backgroundOne) !important}
 .loading_popup				{background: var(--backgroundTwo) !important}
 .hybrid_inn_bp				{background: var(--backgroundTwo) !important}
 .ph_class_img_outer2			{background: var(--backgroundTwo) !important}

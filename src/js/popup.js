@@ -22,19 +22,17 @@ function save_options() {
 	});
 }
 function disableStuff() {
-	if (document.getElementById("redirect").checked == false) {
-		document.getElementById("dark").disabled = true;
-		document.getElementById("themeSelect").disabled = true;
+	var redirect	= document.getElementById("redirect");
+	var custom	= document.getElementById("dark");
+	var theme	= document.getElementById("themeSelect");
+	if (document.getElementById("redirect").checked) {
+		custom.disabled = false;
+		if (custom.checked) {theme.disabled = false;}
+		else {theme.disabled = true;}
 	}
 	else {
-		document.getElementById("dark").disabled = false;
-		document.getElementById("themeSelect").disabled = false;
-	}
-
-	if (document.getElementById("dark").checked == false) {	
-		document.getElementById("themeSelect").disabled = true;
-	} else {
-		document.getElementById("themeSelect").disabled = false;
+		custom.disabled = true;
+		theme.disabled	= true
 	}
 }
 // Restores select box and checkbox state using the preferences

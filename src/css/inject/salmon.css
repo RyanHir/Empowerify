@@ -2,7 +2,7 @@
 	--backgroundOne: #FA8072;
 	--backgroundTwo: #73ECFA;
 	--colorOne:	 #FAC473;
-	--colorTwo:	 #FA73A9;
+	--colorTwo:	 #73ECFA;
 }
 
 .drag_out td				{background: var(--backgroundOne) !important}

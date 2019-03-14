@@ -30,6 +30,6 @@ function closingCode(){
 	}
 }
 window.onbeforeunload	= closingCode;
-window.onload		= checkIfNewEmpower;
-$( document ).ready(checkIfNewEmpower);
-$('html').bind('DOMSubtreeModified', checkIfNewEmpower);
+//window.onload		= checkIfNewEmpower;
+//$( document ).ready(checkIfNewEmpower);
+//$('html').bind('DOMSubtreeModified', checkIfNewEmpower);

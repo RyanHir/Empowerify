@@ -30,6 +30,12 @@ function disableStuff() {
 		document.getElementById("dark").disabled = false;
 		document.getElementById("themeSelect").disabled = false;
 	}
+
+	if (document.getElementById("dark").checked == false) {	
+		document.getElementById("themeSelect").disabled = true;
+	} else {
+		document.getElementById("themeSelect").disabled = false;
+	}
 }
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
@@ -49,6 +55,8 @@ function restore_options() {
 }
 document.addEventListener('DOMContentLoaded', restore_options);
 document.getElementById("redirect").addEventListener( 'click',
+	disableStuff);
+document.getElementById("dark").addEventListener( 'click',
 	disableStuff);
 document.getElementById('save').addEventListener('click',
 	save_options);

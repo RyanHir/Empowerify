@@ -29,15 +29,15 @@ function oldTheme() {
 
 function newTheme() {
 	if (dark == true) {
-		//if (theme == "dark") {
-		//	chrome.tabs.insertCSS({
-		//		file: cssDir+'old/dark.css',
-		//	});
-		//} else if (theme == "salmon") {
-		//	chrome.tabs.insertCSS({
-		//		file: cssDir+'salmon.css',
-		//	});
-		//}
+		if (theme == "dark") {
+			chrome.tabs.insertCSS({
+				file: cssDir+'new/dark.css',
+			});
+		} else if (theme == "salmon") {
+			chrome.tabs.insertCSS({
+				file: cssDir+'new/salmon.css',
+			});
+		}
 	}
 }
 

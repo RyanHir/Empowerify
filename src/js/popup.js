@@ -22,18 +22,10 @@ function save_options() {
 	});
 }
 function disableStuff() {
-	var redirect	= document.getElementById("redirect");
 	var custom	= document.getElementById("dark");
 	var theme	= document.getElementById("themeSelect");
-	//if (document.getElementById("redirect").checked) {
-	//	custom.disabled = false;
-	//	if (custom.checked) {theme.disabled = false;}
-	//	else {theme.disabled = true;}
-	//}
-	//else {
-	//	custom.disabled = true;
-	//	theme.disabled	= true
-	//}
+	if (custom.checked) {theme.disabled = false;}
+	else {theme.disabled = true;}
 }
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.

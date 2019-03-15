@@ -19,13 +19,14 @@ body.iframeBody				{background-color: var(--backgroundOne) !important;}
 .ph_main_out				{background: var(--backgroundTwo) !important;}
 
 /*					{color: var(--colorTwo) !important;}*/
-.courseDiv *				{color: var(--colorTwo) !important;}
-.create_inner_122817k p			{color: var(--colorTwo) !important;}
-.newly-scored-box-122817k span		{color: var(--colorTwo) !important;}
+.courseDiv *				{color: var(--colorOne) !important;}
+.create_inner_122817k p			{color: var(--colorOne) !important;}
+.newly-scored-box-122817k span		{color: var(--colorOne) !important;}
 
 .loading_popup				{border: 0px solid black !important}
 .content				{height: 100% !important}
 .left_column				{box-shadow: none !important}
 #walkme-player				{display: none !important}
+table.ph_main_out			{border-bottom: 1px solid var(--colorOne) !important;}
 
 .intro_detail_inner_122817k		{border: 0px solid black !important;}

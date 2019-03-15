@@ -27,5 +27,6 @@ body.iframeBody				{background-color: var(--backgroundOne) !important;}
 .content				{height: 100% !important}
 .left_column				{box-shadow: none !important}
 #walkme-player				{display: none !important}
+table.ph_main_out			{border-bottom: 1px solid var(--colorOne) !important;}
 
 .intro_detail_inner_122817k		{border: 0px solid black !important;}

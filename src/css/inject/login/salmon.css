@@ -1,17 +1,2 @@
-:root {
-	--backgroundOne: #FA8072;
-	--backgroundTwo: #73ECFA;
-	--colorOne:	 #FAC473;
-	--colorTwo:	 #73ECFA;
-}
-
-html {background: var(--backgroundOne)}
-.main_top_outer {background:var(--backgroundOne)}
-.main_outer {background:	var(--backgroundOne)}
-.inner_outer {background:	var(--backgroundTwo)}
-
-.username_forget * {color:	var(--colorTwo)}
-.cloneSSO2 * {color:		var(--colorTwo)}
-
-.right_top_green {display:	none}
-.logo img {display:			none}
+@import url('../constants/themes/salmon.css');
+@import url('../constants/template/login.css');

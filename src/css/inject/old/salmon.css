@@ -1,2 +1,41 @@
 @import url('../constants/themes/salmon.css');
 @import url('../constants/template/old.css');
+body table				{background: var(--backgroundOne) !important}
+.drag_out td				{background: var(--backgroundOne) !important}
+.drag_out td li				{background: var(--backgroundOne) !important}
+.drag_out td ol				{background: var(--backgroundOne) !important}
+#PlaylistMainarea			{background: var(--backgroundOne) !important}
+html					{background: var(--backgroundOne) !important}
+.bgrep					{background: var(--backgroundOne) !important}
+.edu_popup				{background: var(--backgroundOne) !important}
+.ph_main_out				{background: var(--backgroundOne) !important}
+.student_vw_stemp3_innn			{background: var(--backgroundOne) !important}
+.content				{background: var(--backgroundOne) !important}
+.loading_popup				{background: var(--backgroundTwo) !important}
+.hybrid_inn_bp				{background: var(--backgroundTwo) !important}
+.ph_class_img_outer2			{background: var(--backgroundTwo) !important}
+.ph_class_img_outer:last-child		{background: var(--backgroundTwo) !important}
+.CalenderCell				{background: var(--backgroundTwo) !important}
+
+.ph_class_img_txt			{color: var(--colorOne) !important}
+.ph_round_right				{color: var(--colorOne) !important}
+.totalMessages				{color: var(--colorOne) !important}
+.white_content				{color: var(--colorOne) !important}
+.td div.ActivityScheduleDateLabel	{color: var(--colorOne) !important}
+.loading_popup				{color: var(--colorTwo) !important}
+.ph_class_name				{color: var(--colorTwo) !important}
+.ph_title				{color: var(--colorTwo) !important}
+.ph_class_img_txt span			{color: var(--colorTwo) !important}
+.ph_class_name span			{color: var(--colorTwo) !important}
+.redactor_editor			{color: var(--colorTwo) !important}
+
+.loading_popup				{border: 0px solid black !important}
+.content				{height: 100% !important}
+.left_column				{box-shadow: none !important}
+#walkme-player				{display: none !important}
+:root {
+	--backgroundOne: #FA8072;
+	--backgroundTwo: #ecf972;
+	--colorOne:	 #72ecf9;
+	--colorTwo:	 #8072f9;
+}

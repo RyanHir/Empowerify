@@ -1,2 +1,18 @@
 @import url('../constants/themes/salmon.css');
 @import url('../constants/template/login.css');
+html {background: var(--backgroundOne)}
+.main_top_outer		{background:	var(--backgroundOne)}
+.main_outer		{background:	var(--backgroundOne)}
+.inner_outer		{background:	var(--backgroundTwo)}
+
+.copy_right_outer	{color:		var(--colorOne)}
+.username_forget *	{color:		var(--colorTwo)}
+.cloneSSO2 *		{color:		var(--colorTwo)}
+.right_top_green	{display:	none}
+.logo img		{display:	none}
+:root {
+	--backgroundOne: #FA8072;
+	--backgroundTwo: #ecf972;
+	--colorOne:	 #72ecf9;
+	--colorTwo:	 #8072f9;
+}

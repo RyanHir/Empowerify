@@ -19,13 +19,9 @@ function getData(){
 function oldTheme() {
 	if (dark == true) {
 		if (theme == "dark") {
-			chrome.tabs.insertCSS({
-				file: cssDir+'old/dark.css',
-			});
+			chrome.tabs.insertCSS({file: cssDir+'old/dark.css'});
 		} else if (theme == "salmon") {
-			chrome.tabs.insertCSS({
-				file: cssDir+'old/salmon.css',
-			});
+			chrome.tabs.insertCSS({file: cssDir+'old/salmon.css'});
 		}
 	}
 }
@@ -33,13 +29,19 @@ function oldTheme() {
 function newTheme() {
 	if (dark == true) {
 		if (theme == "dark") {
-			chrome.tabs.insertCSS({
-				file: cssDir+'new/dark.css',
-			});
+			chrome.tabs.insertCSS({file: cssDir+'new/dark.css'});
 		} else if (theme == "salmon") {
-			chrome.tabs.insertCSS({
-				file: cssDir+'new/salmon.css',
-			});
+			chrome.tabs.insertCSS({file: cssDir+'new/salmon.css'});
+		}
+	}
+}
+
+function loginTheme() {
+	if (dark == true) {
+		if (theme == "dark") {
+			chrome.tabs.insertCSS({file: cssDir+'login/dark.css'});
+		} else if (theme == "salmon") {
+			chrome.tabs.insertCSS({file: cssDir+'login/salmon.css'});
 		}
 	}
 }
@@ -50,13 +52,15 @@ chrome.tabs.onUpdated.addListener(function(tab) {
 	chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
 		var temp = new URL(tabs[0].url);
 		
-		currentpath = temp.search;
+		currentpath = temp.pathname + temp.search;
 	});
 
-	if (currentpath == "?iCtrl=PLAYLIST_HOME_CLASS") {
+	if (currentpath == "/iFrame.aspx?iCtrl=PLAYLIST_HOME_CLASS") {
 		oldTheme();
-	} else if (currentpath == "?iCtrl=STUDENT_BASE_HOME_CONTROL") {
+	} else if (currentpath == "/iFrame.aspx?iCtrl=STUDENT_BASE_HOME_CONTROL") {
 		newTheme();
+	} else if (currentpath == "/default.aspx?LOAD_PAGE=true") {
+		loginTheme();
 	}
 });
 

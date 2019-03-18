@@ -14,7 +14,7 @@
   },
   "permissions": [
 	  "storage",
-	  "https://*.empowerlearning.net/*",
+	  "*://*.empowerlearning.net/*",
 	  "tabs",
 	  "webRequest",
 	  "webRequestBlocking"

@@ -1,15 +1,18 @@
 var dark	= false;
 var theme	= "dark";
+var redirect = false;
 var cssDir	= "/src/css/inject/";
 var currentpath = "";
 
 function getData(){
 	chrome.storage.local.get({
 		dark:	false,
-		theme:	"dark"
+		theme:	"dark",
+		redirect: true
 	}, function(items) {
 		dark	= items.dark;
 		theme	= items.theme;
+		redirect = items.redirect;
 	});
 }
 
@@ -56,3 +59,19 @@ chrome.tabs.onUpdated.addListener(function(tab) {
 		newTheme();
 	}
 });
+
+function interceptRequest(request) {
+	getData();
+	var newURL = new URL(request.url);
+	if (redirect == false) {
+		return {
+			cancel: false
+		};
+	} else {
+		return {
+			redirectUrl: newURL.origin + '/iFrame.aspx?iCtrl=PLAYLIST_HOME_CLASS'
+		}
+	}
+}
+
+chrome.webRequest.onBeforeRequest.addListener(interceptRequest, { urls: ['*://*.empowerlearning.net/iFrame.aspx?iCtrl=STUDENT_BASE_HOME_CONTROL'] }, ['blocking']);

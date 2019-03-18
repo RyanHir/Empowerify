@@ -1,0 +1,17 @@
+:root {
+	--backgroundOne: #33383b;
+	--backgroundTwo: #596167;
+	--colorOne:	 #33383b;
+	--colorTwo:	 #E0E0E0;
+}
+
+html {background: var(--backgroundOne)}
+.main_top_outer {background:var(--backgroundOne)}
+.main_outer {background:	var(--backgroundOne)}
+.inner_outer {background:	var(--backgroundTwo)}
+
+.username_forget * {color:	var(--colorTwo)}
+.cloneSSO2 * {color:		var(--colorTwo)}
+
+.right_top_green {display:	none}
+.logo img {display:			none}

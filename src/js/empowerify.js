@@ -1,24 +1,11 @@
-var redirect	= false;
 var goBack	= false;
 
 function getData(){
 	chrome.storage.local.get({
-		redirect: true,
 		goBack:   true,
 	}, function(items) {
-		redirect = items.redirect;
 		goBack   = items.goBack;
 	});
-}
-function checkIfNewEmpower(){
-	getData();
-	if (redirect == true) {
-		if (window.location.search == "?iCtrl=STUDENT_BASE_HOME_CONTROL") {
-			$('html *').remove()
-			window.stop();
-			window.location.search = "?iCtrl=PLAYLIST_HOME_CLASS";
-		}
-	}
 }
 function closingCode(){
 	getData();
@@ -30,6 +17,3 @@ function closingCode(){
 	}
 }
 window.onbeforeunload	= closingCode;
-window.onload		= checkIfNewEmpower;
-$( document ).ready(checkIfNewEmpower);
-$('html').bind('DOMSubtreeModified', checkIfNewEmpower);

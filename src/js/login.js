@@ -1,25 +1,14 @@
-var redirect	= false;
+// This page will get depricated, and that is a promise
 var dark	= false;
 
 function getData(){
 	chrome.storage.local.get({
-		redirect: true,
 		dark:     false,
 	}, function(items) {
-		redirect = items.redirect;
 		dark     = items.dark;
 	});
 }
 
-function checkIfNewEmpower(){
-	getData();
-	if (redirect == true) {
-		if (window.location.search == "?iCtrl=STUDENT_BASE_HOME_CONTROL") {
-			window.stop();
-			window.location.search = "?iCtrl=PLAYLIST_HOME_CLASS";
-		}
-	}
-}
 function darkMode(){
 	getData();
 
@@ -42,12 +31,7 @@ function darkMode(){
 		$('.logo img').css('display',				"none");
 	}
 }
-function theOnLoad(){
-	getData();
-	checkIfNewEmpower();
-	darkMode();
-}
-window.onload =	theOnLoad;
-window.onchange = theOnLoad;
-$( document ).ready(theOnLoad);
-$('html').bind('DOMSubtreeModified',theOnLoad);
+window.onload =	darkMode;
+window.onchange = darkMode;
+$( document ).ready(darkMode);
+$('html').bind('DOMSubtreeModified',darkMode);

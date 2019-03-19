@@ -1,3 +1,4 @@
+mkdir -p out/
 echo "compiling version" $(cat manifest.json | jq ".version" | sed 's/"//g') " For Chrome"
 zip -r out/chrome.zip * -x docs/**\* -x *.sh -x *.md $> /dev/null
 echo "compiling version" $(cat manifest.json | jq ".version" | sed 's/"//g') " For Firefox"

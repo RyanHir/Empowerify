@@ -49,10 +49,11 @@ function loginTheme() {
 chrome.tabs.onUpdated.addListener(function(tab) {
 	getData();
 
-	chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
+	chrome.tabs.query({ currentWindow: true, lastFocusedWindow: true, active:true }, function (tabs) {
 		var temp = new URL(tabs[0].url);
 		
 		currentpath = temp.pathname + temp.search;
+		console.log(temp);
 	});
 
 	if (currentpath == "/iFrame.aspx?iCtrl=PLAYLIST_HOME_CLASS") {

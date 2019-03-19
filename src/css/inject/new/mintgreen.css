@@ -1,5 +1,3 @@
-/* *					{background: var(--backgroundOne);}*/
-.main-inner-con-122917k			{background: var(--backgroundOne) !important;}
 html					{background-color: var(--backgroundOne) !important;}
 body.iframeBody				{background-color: var(--backgroundOne) !important;}
 .playlist-bottom-outer-122917k		{background-color: var(--backgroundOne) !important;}
@@ -23,3 +21,10 @@ body.iframeBody				{background-color: var(--backgroundOne) !important;}
 table.ph_main_out			{border-bottom: 1px solid var(--colorOne) !important;}
 
 .intro_detail_inner_122817k		{border: 0px solid black !important;}
+:root {
+	--backgroundOne: #bdffbd;
+	--backgroundTwo: #bcffff;
+	--colorOne:	 #ffbcff;
+	--colorTwo:	 #ffbcbc;
+}
+

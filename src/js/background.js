@@ -22,6 +22,8 @@ function oldTheme() {
 			chrome.tabs.insertCSS({file: cssDir+'old/dark.css'});
 		} else if (theme == "salmon") {
 			chrome.tabs.insertCSS({file: cssDir+'old/salmon.css'});
+		} else if (theme == "mint") {
+			chrome.tabs.insertCSS({file: cssDir+'old/mintgreen.css'});
 		}
 	}
 }
@@ -32,6 +34,8 @@ function newTheme() {
 			chrome.tabs.insertCSS({file: cssDir+'new/dark.css'});
 		} else if (theme == "salmon") {
 			chrome.tabs.insertCSS({file: cssDir+'new/salmon.css'});
+		} else if (theme == "mint") {
+			chrome.tabs.insertCSS({file: cssDir+'new/mintgreen.css'});
 		}
 	}
 }
@@ -42,6 +46,8 @@ function loginTheme() {
 			chrome.tabs.insertCSS({file: cssDir+'login/dark.css'});
 		} else if (theme == "salmon") {
 			chrome.tabs.insertCSS({file: cssDir+'login/salmon.css'});
+		} else if (theme == "mint") {
+			chrome.tabs.insertCSS({file: cssDir+'login/mintgreen.css'});
 		}
 	}
 }

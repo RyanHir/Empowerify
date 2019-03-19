@@ -31,3 +31,10 @@ html					{background: var(--backgroundOne) !important}
 .content				{height: 100% !important}
 .left_column				{box-shadow: none !important}
 #walkme-player				{display: none !important}
+:root {
+	--backgroundOne: #bdffbd;
+	--backgroundTwo: #bcffff;
+	--colorOne:	 #ffbcff;
+	--colorTwo:	 #ffbcbc;
+}
+

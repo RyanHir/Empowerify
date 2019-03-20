@@ -16,38 +16,14 @@ function getData(){
 	});
 }
 
-function oldTheme() {
+function cssImport(site) {
 	if (dark == true) {
 		if (theme == "dark") {
-			chrome.tabs.insertCSS({file: cssDir+'old/dark.css'});
+			chrome.tabs.insertCSS({file: cssDir+"/"+site+'/dark.css'});
 		} else if (theme == "salmon") {
-			chrome.tabs.insertCSS({file: cssDir+'old/salmon.css'});
+			chrome.tabs.insertCSS({file: cssDir+"/"+site+'/salmon.css'});
 		} else if (theme == "mint") {
-			chrome.tabs.insertCSS({file: cssDir+'old/mintgreen.css'});
-		}
-	}
-}
-
-function newTheme() {
-	if (dark == true) {
-		if (theme == "dark") {
-			chrome.tabs.insertCSS({file: cssDir+'new/dark.css'});
-		} else if (theme == "salmon") {
-			chrome.tabs.insertCSS({file: cssDir+'new/salmon.css'});
-		} else if (theme == "mint") {
-			chrome.tabs.insertCSS({file: cssDir+'new/mintgreen.css'});
-		}
-	}
-}
-
-function loginTheme() {
-	if (dark == true) {
-		if (theme == "dark") {
-			chrome.tabs.insertCSS({file: cssDir+'login/dark.css'});
-		} else if (theme == "salmon") {
-			chrome.tabs.insertCSS({file: cssDir+'login/salmon.css'});
-		} else if (theme == "mint") {
-			chrome.tabs.insertCSS({file: cssDir+'login/mintgreen.css'});
+			chrome.tabs.insertCSS({file: cssDir+"/"+site+'/mintgreen.css'});
 		}
 	}
 }
@@ -63,11 +39,11 @@ chrome.tabs.onUpdated.addListener(function(tab) {
 	});
 
 	if (currentpath == "/iFrame.aspx?iCtrl=PLAYLIST_HOME_CLASS") {
-		oldTheme();
+		cssImport("old");
 	} else if (currentpath == "/iFrame.aspx?iCtrl=STUDENT_BASE_HOME_CONTROL") {
-		newTheme();
+		cssImport("new");
 	} else if (currentpath == "/default.aspx?LOAD_PAGE=true") {
-		loginTheme();
+		cssImport("login");
 	}
 });
 

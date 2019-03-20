@@ -31,7 +31,9 @@
 	{ "version": "2.1.0.1",
           "update_link": "https://github.com/RyanHir/Empowerify/releases/download/2.1.0.1/empowerify-2.1.0.1-fx.xpi"},
 	{ "version": "2.1.1",
-          "update_link": "https://github.com/RyanHir/Empowerify/releases/download/2.1.1/empowerify-2.1.1-fx.xpi"}
+          "update_link": "https://github.com/RyanHir/Empowerify/releases/download/2.1.1/empowerify-2.1.1-fx.xpi"},
+	{ "version": "2.1.1.1",
+          "update_link": "https://github.com/RyanHir/Empowerify/releases/download/2.1.1.1/empowerify-2.1.1.1-fx.xpi"}
       ]
     }
   }

@@ -1,5 +1,3 @@
-@import url('../constants/themes/dark.css');
-@import url('../constants/template/login.css');
 html {background: var(--backgroundOne)}
 .main_top_outer		{background:	var(--backgroundOne)}
 .main_outer		{background:	var(--backgroundOne)}

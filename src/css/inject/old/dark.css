@@ -1,5 +1,3 @@
-@import url('../constants/themes/dark.css');
-@import url('../constants/template/old.css');
 body table				{background: var(--backgroundOne) !important}
 .drag_out td				{background: var(--backgroundOne) !important}
 .drag_out td li				{background: var(--backgroundOne) !important}
@@ -28,11 +26,17 @@ html					{background: var(--backgroundOne) !important}
 .ph_class_img_txt span			{color: var(--colorTwo) !important}
 .ph_class_name span			{color: var(--colorTwo) !important}
 .redactor_editor			{color: var(--colorTwo) !important}
+.new_play_title span			{color: var(--colorTwo) !important}
+.unit_title_input02			{color: var(--colorTwo) !important}
 
 .loading_popup				{border: 0px solid black !important}
+#PreviewImage				{border: 5px solid var(--backgroundTwo) !important}
 .content				{height: 100% !important}
 .left_column				{box-shadow: none !important}
 #walkme-player				{display: none !important}
+.unit_title_input02			{text-shadow: none !important}
+*					{font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important}
+.ph_class_name				{font-weight: 600 !important}
 :root {
 	--backgroundOne: #33383b;
 	--backgroundTwo: #596167;

@@ -7,9 +7,9 @@ body.iframeBody				{background-color: var(--backgroundOne) !important;}
 .my-home-inner-box-122817k		{background: var(--backgroundTwo) !important;}
 .courseDiv				{background: var(--backgroundTwo) !important;}
 .courseDiv *				{background: var(--backgroundTwo) !important;}
-.intro_detail_inner_122817k		{background: var(--backgroundTwo) !important;}
+.intro_detail_inner_122817k		{background: var(--backgroundOne) !important;}
 .next-up-inner-122817k			{background: var(--backgroundTwo) !important;}
-.ph_main_out				{background: var(--backgroundTwo) !important;}
+.ph_main_out				{background: var(--backgroundOne) !important;}
 .next-up-inner-122817k li .mastery_img_outer_bp	{background: var(--backgroundOne) !important;}
 
 .courseDiv *				{color: var(--colorOne) !important;}

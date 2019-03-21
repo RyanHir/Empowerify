@@ -37,6 +37,9 @@ html					{background: var(--backgroundOne) !important}
 .unit_title_input02			{text-shadow: none !important}
 *					{font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important}
 .ph_class_name				{font-weight: 600 !important}
+.ph_round_right				{
+	font-weight: 650 !important;
+}
 :root {
 	--backgroundOne: #FA8072;
 	--backgroundTwo: #ecf972;

@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "Empowerify",
-  "version": "2.1.3",
-  "description": "This tool adds a (Do you want to leave? and Redirect to old) to a new school website empower.",
+  "version": "2.2",
+  "description": "Fixing Empower Learning one function at a time",
   "icons": {
     "128": "src/icons/icon.png"
   },

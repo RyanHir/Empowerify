@@ -35,7 +35,6 @@ html					{background: var(--backgroundOne) !important}
 .left_column				{box-shadow: none !important}
 #walkme-player				{display: none !important}
 .unit_title_input02			{text-shadow: none !important}
-*					{font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important}
 .ph_class_name				{font-weight: 600 !important}
 .ph_round_right				{
 	font-weight: 650 !important;

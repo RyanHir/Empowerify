@@ -1,6 +1,7 @@
 var dark	= false;
 var theme	= "dark";
 var redirect = false;
+var font    = "system";
 var cssDir	= "/src/css";
 var currentpath = "";
 
@@ -8,11 +9,13 @@ function getData(){
 	chrome.storage.local.get({
 		dark:	false,
 		theme:	"dark",
-		redirect: true
+		redirect: true,
+		font:   "system"
 	}, function(items) {
 		dark	= items.dark;
 		theme	= items.theme;
 		redirect = items.redirect;
+		font    = items.font;
 	});
 }
 
@@ -27,6 +30,17 @@ function cssImport(site) {
 		} else if (theme == "navy") {
 			chrome.tabs.insertCSS({file: cssDir+'/template/theme/navy.css'});
 		}
+
+		if (font == "system") {
+			chrome.tabs.insertCSS({file: cssDir+'/template/fonts/system.css'});
+		} else if (font == "arial") {
+			chrome.tabs.insertCSS({file: cssDir+'/template/fonts/arial.css'});
+		} else if (font == "comicSans") {
+			chrome.tabs.insertCSS({file: cssDir+'/template/fonts/comicSans.css'});
+		} else if (font == "times") {
+			chrome.tabs.insertCSS({file: cssDir+'/template/fonts/times.css'});
+		}
+
 		chrome.tabs.insertCSS({file: cssDir+'/template/site/'+site+'.css'});
 	}
 }

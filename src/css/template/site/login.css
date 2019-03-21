@@ -8,9 +8,3 @@ html {background: var(--backgroundOne)}
 .cloneSSO2 *		{color:		var(--colorTwo)}
 .right_top_green	{display:	none}
 .logo img		{display:	none}
-:root {
-	--backgroundOne: #FA8072;
-	--backgroundTwo: #ecf972;
-	--colorOne:	 #72ecf9;
-	--colorTwo:	 #8072f9;
-}

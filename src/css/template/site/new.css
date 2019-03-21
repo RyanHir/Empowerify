@@ -11,6 +11,7 @@ body.iframeBody				{background-color: var(--backgroundOne) !important;}
 .next-up-inner-122817k			{background: var(--backgroundTwo) !important;}
 .ph_main_out				{background: var(--backgroundOne) !important;}
 .next-up-inner-122817k li .mastery_img_outer_bp	{background: var(--backgroundOne) !important;}
+
 .courseDiv *				{color: var(--colorOne) !important;}
 .create_inner_122817k p			{color: var(--colorOne) !important;}
 .newly-scored-box-122817k span		{color: var(--colorOne) !important;}
@@ -23,11 +24,7 @@ body.iframeBody				{background-color: var(--backgroundOne) !important;}
 .left_column				{box-shadow: none !important}
 #walkme-player				{display: none !important}
 table.ph_main_out			{border-bottom: 1px solid var(--colorOne) !important;}
+.last-viewed-inner-122817k	{border: 0px solid black !important;}
+.last-viewed-inner-122817k .mastery_img_outer_bp {background: var(--backgroundOne) !important;}
 
 .intro_detail_inner_122817k		{border: 0px solid black !important;}
-:root {
-	--backgroundOne: #FA8072;
-	--backgroundTwo: #ecf972;
-	--colorOne:	 #72ecf9;
-	--colorTwo:	 #8072f9;
-}

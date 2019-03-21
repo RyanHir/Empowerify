@@ -40,10 +40,3 @@ html					{background: var(--backgroundOne) !important}
 .ph_round_right				{
 	font-weight: 650 !important;
 }
-:root {
-	--backgroundOne: #bdffbd;
-	--backgroundTwo: #bcffff;
-	--colorOne:	 #ffbcff;
-	--colorTwo:	 #ffbcbc;
-}
-

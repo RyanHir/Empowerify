@@ -1,7 +1,7 @@
 var dark	= false;
 var theme	= "dark";
 var redirect = false;
-var cssDir	= "/src/css/inject/";
+var cssDir	= "/src/css";
 var currentpath = "";
 
 function getData(){
@@ -19,12 +19,13 @@ function getData(){
 function cssImport(site) {
 	if (dark == true) {
 		if (theme == "dark") {
-			chrome.tabs.insertCSS({file: cssDir+"/"+site+'/dark.css'});
+			chrome.tabs.insertCSS({file: cssDir+'/template/theme/dark.css'});
 		} else if (theme == "salmon") {
-			chrome.tabs.insertCSS({file: cssDir+"/"+site+'/salmon.css'});
+			chrome.tabs.insertCSS({file: cssDir+'/template/theme/salmon.css'});
 		} else if (theme == "mint") {
-			chrome.tabs.insertCSS({file: cssDir+"/"+site+'/mintgreen.css'});
+			chrome.tabs.insertCSS({file: cssDir+'/template/theme/mintgreen.css'});
 		}
+		chrome.tabs.insertCSS({file: cssDir+'/template/site/'+site+'.css'});
 	}
 }
 

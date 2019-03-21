@@ -23,7 +23,9 @@ function cssImport(site) {
 		} else if (theme == "salmon") {
 			chrome.tabs.insertCSS({file: cssDir+'/template/theme/salmon.css'});
 		} else if (theme == "mint") {
-			chrome.tabs.insertCSS({file: cssDir+'/template/theme/mintgreen.css'});
+			chrome.tabs.insertCSS({file: cssDir+'/template/theme/mint.css'});
+		} else if (theme == "navy") {
+			chrome.tabs.insertCSS({file: cssDir+'/template/theme/navy.css'});
 		}
 		chrome.tabs.insertCSS({file: cssDir+'/template/site/'+site+'.css'});
 	}

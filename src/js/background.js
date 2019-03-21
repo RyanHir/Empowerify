@@ -49,8 +49,12 @@ chrome.tabs.onUpdated.addListener(function(tab) {
 	getData();
 
 	chrome.tabs.query({ currentWindow: true, lastFocusedWindow: true, active:true }, function (tabs) {
-		var temp = new URL(tabs[0].url);
-		
+		try {
+			var temp = new URL(tabs[0].url);
+		} catch {
+			var temp = "";
+		}
+
 		currentpath = temp.pathname + temp.search;
 		console.log(temp);
 	});

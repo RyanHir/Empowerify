@@ -4,18 +4,30 @@ var redirect = false;
 var font    = "system";
 var cssDir	= "/src/css";
 var currentpath = "";
+var colorA = "";
+var colorB = "";
+var colorC = "";
+var colorD = "";
 
 function getData(){
 	chrome.storage.local.get({
 		dark:	false,
 		theme:	"dark",
 		redirect: true,
-		font:   "system"
+		font:   "system",
+		colorA: "",
+		colorB: "",
+		colorC: "",
+		colorD: ""
 	}, function(items) {
-		dark	= items.dark;
-		theme	= items.theme;
+		dark   = items.dark;
+		theme  = items.theme;
 		redirect = items.redirect;
-		font    = items.font;
+		font   = items.font;
+		colorA = items.colorA;
+		colorB = items.colorB;
+		colorC = items.colorC;
+		colorD = items.colorD;
 	});
 }
 
@@ -29,6 +41,15 @@ function cssImport(site) {
 			chrome.tabs.insertCSS({file: cssDir+'/template/theme/mint.css'});
 		} else if (theme == "navy") {
 			chrome.tabs.insertCSS({file: cssDir+'/template/theme/navy.css'});
+		} else if (theme == "custom") {
+			chrome.tabs.insertCSS({code:
+				"root: {" +
+				"--backgroundOne: " + colorA + ";" +
+				"--backgroundTwo: " + colorB + ";" +
+				"--colorOne: " + colorC + ";" +
+				"--colorTwo: " + colorD + ";" +
+				"}"
+			});
 		}
 
 		if (font == "system") {

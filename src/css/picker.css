@@ -1,18 +1,26 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 html {
     height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
-body {min-height: 100%}
 
 #content {
     display: grid;
-    grid-template-columns: auto 100%;
-    grid-template-rows: 100%;
-    height: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 100%;
+    max-width: 100%;
 }
 
 #sidebar {
     background: grey;
     height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 #main {
@@ -31,4 +39,17 @@ body {min-height: 100%}
 }
 #four {
     background: white;
+}
+
+#sidebar input {
+	float: left;
+}
+
+#sidebar button {
+	float: right;
+}
+
+#sidebar * {
+	display: block;
+	width: 100%;
 }

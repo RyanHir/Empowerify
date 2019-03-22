@@ -26,8 +26,15 @@ function save_options() {
 function disableStuff() {
 	var custom	= document.getElementById("dark");
 	var theme	= document.getElementById("themeSelect");
-	if (custom.checked) {theme.disabled = false;}
-	else {theme.disabled = true;}
+	var font	= document.getElementById("fontSelect");
+	if (custom.checked) {
+		theme.disabled = false;
+		font.disabled = false;
+	}
+	else {
+		theme.disabled = true;
+		font.disabled = true;
+	}
 }
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.

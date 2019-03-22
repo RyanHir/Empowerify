@@ -1,0 +1,34 @@
+html {
+    height: 100%;
+}
+body {min-height: 100%}
+
+#content {
+    display: grid;
+    grid-template-columns: auto 100%;
+    grid-template-rows: 100%;
+    height: 100%;
+}
+
+#sidebar {
+    background: grey;
+    height: 100%;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+#one {
+    background: black;
+}
+#two {
+    background: darkgray;
+}
+#three {
+    background: grey;
+}
+#four {
+    background: white;
+}

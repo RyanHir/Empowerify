@@ -4,13 +4,11 @@ function save_options() {
 	var goBack =		document.getElementById('goBack').checked;
 	var dark =		document.getElementById('dark').checked;
 	var selection =		document.getElementById('themeSelect').value;
-	var font =			document.getElementById('fontSelect').value;
 	chrome.storage.local.set({
 		redirect:	redirect,
 		goBack:		goBack,
 		dark:		dark,
 		theme:		selection,
-		font:		font
 	}, function() {
 		// Update status to let user know options were saved.
 		var status = document.getElementById('save');
@@ -26,14 +24,13 @@ function save_options() {
 function disableStuff() {
 	var custom	= document.getElementById("dark");
 	var theme	= document.getElementById("themeSelect");
-	var font	= document.getElementById("fontSelect");
+	var btnPicker   = document.getElementById("colorPicker");
 	if (custom.checked) {
 		theme.disabled = false;
-		font.disabled = false;
 	}
 	else {
 		theme.disabled = true;
-		font.disabled = true;
+
 	}
 }
 // Restores select box and checkbox state using the preferences
@@ -44,13 +41,11 @@ function restore_options() {
 		goBack:	  true,
 		dark:	  false,
 		theme:	  "dark",
-		font:     "system"
 	}, function(items) {
 		document.getElementById('redirect').checked		= items.redirect;
 		document.getElementById('goBack').checked		= items.goBack;
 		document.getElementById('dark').checked			= items.dark;
 		document.getElementById('themeSelect').value	= items.theme;
-		document.getElementById('fontSelect').value		= items.font;
 		disableStuff();
 	});
 }

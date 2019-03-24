@@ -6,7 +6,10 @@ body table				{background: var(--backgroundOne) !important}
 html					{background: var(--backgroundOne) !important}
 .bgrep					{background: var(--backgroundOne) !important}
 .edu_popup				{background: var(--backgroundOne) !important}
-.ph_main_out				{background: var(--backgroundOne) !important}
+.ph_main_out				{
+	background: var(--backgroundOne) !important;
+	border-bottom: 1px solid var(--backgroundTwo) !important;
+}
 .student_vw_stemp3_innn			{background: var(--backgroundOne) !important}
 .content				{background: var(--backgroundOne) !important}
 .loading_popup				{background: var(--backgroundTwo) !important}

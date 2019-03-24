@@ -1,10 +1,11 @@
-html {background: var(--backgroundOne)}
-.main_top_outer		{background:	var(--backgroundOne)}
-.main_outer		{background:	var(--backgroundOne)}
-.inner_outer		{background:	var(--backgroundTwo)}
+html			{background: var(--backgroundOne)}
+.main_top_outer		{background:	var(--backgroundOne) !important}
+.main_outer		{background:	var(--backgroundOne) !important}
+.inner_outer		{background:	var(--backgroundTwo) !important}
 
-.copy_right_outer	{color:		var(--colorOne)}
-.username_forget *	{color:		var(--colorTwo)}
-.cloneSSO2 *		{color:		var(--colorTwo)}
-.right_top_green	{display:	none}
-.logo img		{display:	none}
+.copy_right_outer	{color:		var(--colorOne) !important}
+.username_forget *	{color:		var(--colorTwo) !important}
+.cloneSSO2 *		{color:		var(--colorTwo) !important}
+.right_top_green	{display:	none !important}
+.logo img		{display:	none !important}
+#walkme-player		{display:	none !important}

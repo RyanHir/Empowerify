@@ -14,6 +14,12 @@ html					{background: var(--backgroundOne) !important}
 .ph_class_img_outer2			{background: var(--backgroundTwo) !important}
 .ph_class_img_outer:last-child		{background: var(--backgroundTwo) !important}
 .CalenderCell				{background: var(--backgroundTwo) !important}
+.play_list_drop_outer			{background: var(--backgroundTwo) !important}
+.play_list_drop_outer *			{background: var(--backgroundTwo) !important}
+.custom-select select			{background: var(--backgroundTwo) !important}
+.report_btn				{background: var(--backgroundTwo) !important}
+.report_btn:active			{background: var(--backgroundOne) !important}
+.quick_access_id			{background: var(--backgroundTwo) !important}
 
 .ph_class_img_txt			{color: var(--colorOne) !important}
 .ph_round_right				{color: var(--colorOne) !important}
@@ -34,8 +40,7 @@ html					{background: var(--backgroundOne) !important}
 .content				{height: 100% !important}
 .left_column				{box-shadow: none !important}
 #walkme-player				{display: none !important}
+#Feedback_Div				{display: none !important}
 .unit_title_input02			{text-shadow: none !important}
 .ph_class_name				{font-weight: 600 !important}
-.ph_round_right				{
-	font-weight: 650 !important;
-}
+.ph_round_right				{font-weight: 650 !important;}

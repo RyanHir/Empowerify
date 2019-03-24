@@ -1,3 +1,6 @@
+html {
+	background: grey;
+}
 #main {
 	display: grid;
 	grid-template-columns: auto auto auto auto;
@@ -14,10 +17,11 @@
 #main div {
 	font-size: 2em;
 	line-height: 1.4em;
+	color: white;
 }
 
 #main input {
-	border: none;
+	border: 2px solid white;
 	padding: 0;
 	height: 4em;
 	background: transparent;

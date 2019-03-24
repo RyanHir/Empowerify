@@ -21,7 +21,7 @@ html {
 }
 
 #main input {
-	border: 2px solid white;
+	border: none;
 	padding: 0;
 	height: 4em;
 	background: transparent;

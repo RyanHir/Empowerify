@@ -24,12 +24,18 @@ function save_options() {
 function disableStuff() {
 	var custom	= document.getElementById("dark");
 	var theme	= document.getElementById("themeSelect");
-	var btnPicker   = document.getElementById("colorPicker");
+	var btnPicker   = document.getElementById("picker");
 	if (custom.checked) {
 		theme.disabled = false;
+		if (theme.value == "custom") {
+			btnPicker.disabled = false;
+		} else {
+			btnPicker.disabled = true;
+		}
 	}
 	else {
 		theme.disabled = true;
+		btnPicker.disabled = true;
 
 	}
 }
@@ -54,5 +60,11 @@ document.getElementById("redirect").addEventListener( 'click',
 	disableStuff);
 document.getElementById("dark").addEventListener( 'click',
 	disableStuff);
+document.getElementById("themeSelect").addEventListener( 'change',
+	disableStuff);
 document.getElementById('save').addEventListener('click',
 	save_options);
+document.getElementById('picker').addEventListener('click',
+	function() {
+		window.open('/src/html/picker.html', '_blank');
+	});

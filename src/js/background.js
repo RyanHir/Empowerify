@@ -32,13 +32,13 @@ function getData(){
 function cssImport(site) {
 	if (dark == true) {
 		if (theme == "dark") {
-			chrome.tabs.insertCSS({file: cssDir+'/template/theme/dark.css'});
+			chrome.tabs.insertCSS({file: cssDir+'/template/theme/dark.css', runAt: "document_start", cssOrigin: "user"});
 		} else if (theme == "salmon") {
-			chrome.tabs.insertCSS({file: cssDir+'/template/theme/salmon.css'});
+			chrome.tabs.insertCSS({file: cssDir+'/template/theme/salmon.css', runAt: "document_start", cssOrigin: "user"});
 		} else if (theme == "mint") {
-			chrome.tabs.insertCSS({file: cssDir+'/template/theme/mint.css'});
+			chrome.tabs.insertCSS({file: cssDir+'/template/theme/mint.css', runAt: "document_start", cssOrigin: "user"});
 		} else if (theme == "navy") {
-			chrome.tabs.insertCSS({file: cssDir+'/template/theme/navy.css'});
+			chrome.tabs.insertCSS({file: cssDir+'/template/theme/navy.css', runAt: "document_start", cssOrigin: "user"});
 		} else if (theme == "custom") {
 			chrome.tabs.insertCSS({code:
 				":root {" +
@@ -46,10 +46,10 @@ function cssImport(site) {
 				"--backgroundTwo: " + colorB + ";" +
 				"--colorOne: " + colorC + ";" +
 				"--colorTwo: " + colorD + ";" +
-				"}"
+				"}", runAt: "document_start", cssOrigin: "user"
 			});
 		}
-		chrome.tabs.insertCSS({file: cssDir+'/template/site/'+site+'.css'});
+		chrome.tabs.insertCSS({file: cssDir+'/template/site/'+site+'.css', runAt: "document_start", cssOrigin: "user"});
 	}
 }
 
@@ -90,4 +90,6 @@ function interceptRequest(request) {
 	}
 }
 
-chrome.webRequest.onBeforeRequest.addListener(interceptRequest, { urls: ['*://*.empowerlearning.net/iFrame.aspx?iCtrl=STUDENT_BASE_HOME_CONTROL'] }, ['blocking']);
+chrome.webRequest.onBeforeRequest.addListener(interceptRequest,
+	{urls: ['*://*.empowerlearning.net/iFrame.aspx?iCtrl=STUDENT_BASE_HOME_CONTROL']},
+	['blocking']);

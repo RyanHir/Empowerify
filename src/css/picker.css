@@ -7,6 +7,42 @@ html {
 	grid-column-gap: 10px;
 }
 
+
+#previewNavbar {
+	display: grid;
+	grid-template-columns: 5% 70% auto;
+	grid-column-gap: 0px;
+	font-size: 2em; 
+	border-bottom: .5px solid blue;
+	line-height: 45px;
+}
+
+#previewBody {
+	margin: 20px;
+}
+
+#class {
+	margin-top: 15px;
+/*  	background: red; */
+	border: 2px solid green;
+	border-radius: 8px;
+	width: 160px;
+	height: 242px;
+}
+
+#className {
+	font-size: 50px
+}
+
+#classPic {
+	border: 2px solid purple;
+	border-radius: 3px;
+	margin: 13px;
+	height: 128px;
+	width: 129px;
+/* 	background: blue; */
+}
+
 #main * {
 	text-align: center;
 	width: 100%;

@@ -23,9 +23,9 @@ function preview() {
     document.getElementById('previewNavbar').style.background = a;
     document.getElementById('previewBody').style.background = a;
     document.getElementById('class').style.background = b;
-    document.getElementById('className').style.color = c;
-    document.getElementById('class').style.color = c;
-    document.getElementById('msg').style.color = d;
+    document.getElementById('className').style.color = d;
+    document.getElementById('class').style.color = d;
+    document.getElementById('msg').style.color = c;
 
 }
 function restore() {

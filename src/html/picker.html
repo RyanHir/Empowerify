@@ -1,18 +1,14 @@
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<html lang="en">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
         <title>Color Picker</title>
         <link href="/src/css/picker.css" rel="stylesheet">
-    <style id="__web-inspector-hide-shortcut-style__" type="text/css">
-.__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *, .__web-inspector-hidebefore-shortcut__::before, .__web-inspector-hideafter-shortcut__::after
-{
-    visibility: hidden !important;
-}
-</style></head>
+</head>
     <body>
         <div class="wrapper">
             <!-- Page Content -->
             <div id="content">
-		<br>
-		<div id="main">
+                <br>
+                <div id="main">
                     <div>Background Body</div>
                     <div>Foreground Body</div>
                     <div>Background Font</div>
@@ -22,18 +18,27 @@
                     <input type="color" name="favcolor" value="#ff0000" id="colorC">
                     <input type="color" name="favcolor" value="#ff0000" id="colorD">
                 </div>
-<br><br>
-		<div style="border: 5px solid black; border-radius: 10px;">
-    <div id="previewNavbar">
-	<div style="background: white; border: 1px solid white; border-radius: 1000px;">&#x1F34A;</div>
-	    <div>Em&#x1F171;ower</div><div>Messages</div></div><div id="previewBody">
-                    <div id="className">Class Name</div>
-                <div id="class">Class<div id="classPic"></div></div></div></div><br>
-		<button id="save">Save</button>
+                <br><br>
+                <div style="border: 5px solid black; border-radius: 10px;">
+                    <div id="previewNavbar">
+                        <div style="background: white; border: 1px solid white; border-radius: 1000px;">&#x1F34A;</div>
+                        <div>Em&#x1F171;ower</div><div id="msg">Messages</div>
+                    </div>
+                    <div id="previewBody">
+                        <div id="className">Class Name</div>
+                        <div id="class">Class
+                            <div id="classPic">
+                                <img style="width: 100%; height: 100%" src="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></img>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <button id="save">Save</button>
             </div>
         </div>
         
     
 
-
+    <script src="/src/js/colorPicker.js"></script>
 </body></html>

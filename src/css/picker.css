@@ -6,7 +6,9 @@ html {
 	grid-template-columns: auto auto auto auto;
 	grid-column-gap: 10px;
 }
-
+* {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
 
 #previewNavbar {
 	display: grid;
@@ -24,7 +26,6 @@ html {
 #class {
 	margin-top: 15px;
 /*  	background: red; */
-	border: 2px solid green;
 	border-radius: 8px;
 	width: 160px;
 	height: 242px;
@@ -35,7 +36,6 @@ html {
 }
 
 #classPic {
-	border: 2px solid purple;
 	border-radius: 3px;
 	margin: 13px;
 	height: 128px;

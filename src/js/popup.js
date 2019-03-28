@@ -28,14 +28,14 @@ function disableStuff() {
 	if (custom.checked) {
 		theme.disabled = false;
 		if (theme.value == "custom") {
-			btnPicker.disabled = false;
+			btnPicker.style.display = "inline-block";
 		} else {
-			btnPicker.disabled = true;
+			btnPicker.style.display = "none";
 		}
 	}
 	else {
 		theme.disabled = true;
-		btnPicker.disabled = true;
+		btnPicker.style.display = "none";
 
 	}
 }
@@ -66,5 +66,6 @@ document.getElementById('save').addEventListener('click',
 	save_options);
 document.getElementById('picker').addEventListener('click',
 	function() {
+		save_options();
 		window.open('/src/html/picker.html', '_blank');
 	});

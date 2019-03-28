@@ -29,20 +29,21 @@ function preview() {
 
 }
 function restore() {
+    var defaultColorA = "#000000";
+    var defaultColorB = "#000000";
     chrome.storage.local.get({
-        colorA: "#000000",
-        colorB: "#000000",
-        colorC: "#000000",
-        colorD: "#000000"
+        colorA: defaultColorA,
+        colorB: defaultColorB,
+        colorC: defaultColorA,
+        colorD: defaultColorB
     },
     function(items) {
         setColors(
-		items.colorA,
-		items.colorB,
-		items.colorC,
-		items.colorD
-	);
-    })
+            items.colorA,
+            items.colorB,
+            items.colorC,
+            items.colorD);
+    });
 }
 document.getElementById('save').addEventListener('click',
     save);

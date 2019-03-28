@@ -1,12 +1,9 @@
 var dark	= false;
 var theme	= "dark";
 var redirect = false;
-var cssDir	= "/src/css";
+var cssDir	= "/src/css/template";
 var currentpath = "";
-var colorA = "";
-var colorB = "";
-var colorC = "";
-var colorD = "";
+var color = {};
 
 function getData(){
 	chrome.storage.local.get({
@@ -14,42 +11,37 @@ function getData(){
 		theme:	"dark",
 		redirect: true,
 		font:   "system",
-		colorA: "#000",
-		colorB: "#000",
-		colorC: "#000",
-		colorD: "#000"
+		colorA: "#000000",
+		colorB: "#FFFFFF",
+		colorC: "#000000",
+		colorD: "#FFFFFF"
 	}, function(items) {
 		dark   = items.dark;
 		theme  = items.theme;
 		redirect = items.redirect;
-		colorA = items.colorA;
-		colorB = items.colorB;
-		colorC = items.colorC;
-		colorD = items.colorD;
+		color  = {
+			A: items.colorA,
+			B: items.colorB,
+			C: items.colorC,
+			D: items.colorD};
 	});
 }
 
 function cssImport(site) {
 	if (dark == true) {
-		if (theme == "dark") {
-			chrome.tabs.insertCSS({file: cssDir+'/template/theme/dark.css', runAt: "document_start", cssOrigin: "user"});
-		} else if (theme == "salmon") {
-			chrome.tabs.insertCSS({file: cssDir+'/template/theme/salmon.css', runAt: "document_start", cssOrigin: "user"});
-		} else if (theme == "mint") {
-			chrome.tabs.insertCSS({file: cssDir+'/template/theme/mint.css', runAt: "document_start", cssOrigin: "user"});
-		} else if (theme == "navy") {
-			chrome.tabs.insertCSS({file: cssDir+'/template/theme/navy.css', runAt: "document_start", cssOrigin: "user"});
+		if (theme != "custom") {
+			chrome.tabs.insertCSS({file: cssDir+'/theme/'+theme+'.css', runAt: "document_start", cssOrigin: "user"});
 		} else if (theme == "custom") {
 			chrome.tabs.insertCSS({code:
 				":root {" +
-				"--backgroundOne: " + colorA + ";" +
-				"--backgroundTwo: " + colorB + ";" +
-				"--colorOne: " + colorC + ";" +
-				"--colorTwo: " + colorD + ";" +
+				"--backgroundOne: " + color.A + ";" +
+				"--backgroundTwo: " + color.B + ";" +
+				"--colorOne: " + color.C + ";" +
+				"--colorTwo: " + color.D + ";" +
 				"}", runAt: "document_start", cssOrigin: "user"
 			});
 		}
-		chrome.tabs.insertCSS({file: cssDir+'/template/site/'+site+'.css', runAt: "document_start", cssOrigin: "user"});
+		chrome.tabs.insertCSS({file: cssDir+'/site/'+site+'.css', runAt: "document_start", cssOrigin: "user"});
 	}
 }
 

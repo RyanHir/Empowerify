@@ -1,9 +1,18 @@
-temp=manifestChrome.json
+version=$(cat manifest.json | jq ".version" | sed 's/"//g')
+output="out"
+temp="manifestChrome.json"
+exclude="*.md *.sh *docs\/* *$output\/* $temp"
 
-mkdir -p out/
-echo "compiling version" $(cat manifest.json | jq ".version" | sed 's/"//g')
-zip -r out/chrome.zip * -x docs/**\* -x *.sh -x *.md $> /dev/null
+rm -rf $output
+mkdir -p $output
+
+echo "compiling version $version"
+
+zip -r "$output/chrome.zip" * -x $exclude $> /dev/null
+
 mv manifest.json $temp
-jq '.permissions += ["tabs"]' $temp >> manifest.json
-zip -r out/firefox.zip * -x docs/**\* -x *.sh -x *.md -x $temp $> /dev/null
+
+cat $temp | jq '.permissions += ["tabs"]' >> manifest.json
+zip -r "$output/firefox.zip" * -x $exclude $> /dev/null
+
 mv $temp manifest.json

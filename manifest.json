@@ -33,11 +33,6 @@
         "src/js/empowerify.js"
       ]
     }
-  ],
-  "applications": {
-    "gecko": {
-      "update_url": "https://ryanhir.github.io/Empowerify/update.json"
-    }
-  }
+  ]
 }
 

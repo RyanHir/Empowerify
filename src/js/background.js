@@ -6,6 +6,7 @@ var currentpath = "";
 var color = {};
 
 function getData(){
+	const start = Date.now();
 	chrome.storage.local.get({
 		dark:	false,
 		theme:	"dark",
@@ -25,9 +26,11 @@ function getData(){
 			C: items.colorC,
 			D: items.colorD};
 	});
+	return (Date.now() - start);
 }
 
 function cssImport(site) {
+	const start = Date.now();
 	if (dark == true) {
 		if (theme != "custom") {
 			chrome.tabs.insertCSS({file: cssDir+'/theme/'+theme+'.css', runAt: "document_start", cssOrigin: "user"});
@@ -43,10 +46,11 @@ function cssImport(site) {
 		}
 		chrome.tabs.insertCSS({file: cssDir+'/site/'+site+'.css', runAt: "document_start", cssOrigin: "user"});
 	}
+	return (Date.now() - start);
 }
 
 chrome.tabs.onUpdated.addListener(function(tab) {
-	getData();
+	var timeToGetData = getData();
 
 	chrome.tabs.query({ currentWindow: true, lastFocusedWindow: true, active:true }, function (tabs) {
 		try {
@@ -56,16 +60,22 @@ chrome.tabs.onUpdated.addListener(function(tab) {
 		}
 
 		currentpath = temp.pathname + temp.search;
-		console.log(temp);
 	});
 
+
+	console.group("Background");
 	if (currentpath == "/iFrame.aspx?iCtrl=PLAYLIST_HOME_CLASS") {
-		cssImport("old");
+		var timeToSetCss = cssImport("old");
+		console.log("Took " + timeToSetCss + " Milisecconds to set User Theme");
 	} else if (currentpath == "/iFrame.aspx?iCtrl=STUDENT_BASE_HOME_CONTROL") {
-		cssImport("new");
+		var timeToSetCss = cssImport("new");
+		console.log("Took " + timeToSetCss + " Milisecconds to set User Theme");
 	} else if (currentpath == "/default.aspx?LOAD_PAGE=true") {
-		cssImport("login");
+		var timeToSetCss = cssImport("login");
+		console.log("Took " + timeToSetCss + " Milisecconds to set User Theme");
 	}
+	console.log("Took " + timeToGetData + " Miliseconds to get User Data");
+	console.groupEnd();
 });
 
 function interceptRequest(request) {

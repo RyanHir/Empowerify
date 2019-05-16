@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 body {
-	width: auto;
 	white-space:nowrap;
 	line-height: 24px;
 	font-size: 16px;
 	font-family: 'Roboto', sans-serif;
 	box-sizing: border-box;
 	margin: 0px;
+
+	
+	/*
+		For Debug Purposes 
+	*/
+	overflow: hidden !important;
+	max-width: 300px;
 }
 .center {
 	text-align: justify;
@@ -22,4 +28,11 @@ body {
 #about {
 	margin-top: 15px;
 	width: auto;
+}
+
+#version {
+	color: grey;
+	text-align: center;
+	font-size: 14px;
+	line-height: 0;
 }

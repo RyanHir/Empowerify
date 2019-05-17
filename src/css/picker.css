@@ -63,7 +63,7 @@ html {
 	background: transparent;
 }
 
-#save {
+.save {
 	margin: 0 auto;
 	display: block;
 	font-size: 1.2em;
@@ -73,6 +73,33 @@ html {
 	background: #add8e6;
 }
 
+#exportArea {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 150px;
+	padding: 10px;
+}
+
+#exportText {
+	border: white 1px;
+	width: 100%;
+}
+
+.exportimport {
+	display: grid;
+	grid-template-columns: auto auto;
+	margin-bottom: 10px;
+}
+
 #save:active {
 	background: #6aabc0;
+}
+
+#preview {
+	border: 5px solid black;
+	border-radius: 10px;
+	display: block;
+	max-width: 1000px;
+	margin: 0 auto;
 }

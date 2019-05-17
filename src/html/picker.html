@@ -19,7 +19,7 @@
                     <input type="color" name="favcolor" value="#ff0000" id="colorD">
                 </div>
                 <br><br>
-                <div style="border: 5px solid black; border-radius: 10px;">
+                <div style="border: 5px solid black; border-radius: 10px;" id="preview">
                     <div id="previewNavbar">
                         <div style="background: white; border-radius: 100%;">&#x1F34A;</div>
                         <div>Em&#x1F171;ower</div><div id="msg" style="text-align: right; margin-right: 12px;">Messages</div>
@@ -34,12 +34,16 @@
                     </div>
                 </div>
                 <br>
-                <button id="save">Save</button>
+                <button id="save" class="save">Save</button>
+                <section id="exportArea">
+                    <div class="exportimport">
+                        <button id="export" class="save">Export</button>
+                        <button id="import" class="save">Import</button>
+                    </div>
+                    <input type="text" id="exportText">
+                </section>
             </div>
         </div>
-            
-        
-
         <script src="/src/js/colorPicker.js"></script>
     </body>
 </html>

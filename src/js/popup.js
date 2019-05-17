@@ -28,14 +28,14 @@ function disableStuff() {
 	if (custom.checked) {
 		theme.disabled = false;
 		if (theme.value == "custom") {
-			btnPicker.style.display = "inline-block";
+			btnPicker.disabled = false;
 		} else {
-			btnPicker.style.display = "none";
+			btnPicker.disabled = true;
 		}
 	}
 	else {
 		theme.disabled = true;
-		btnPicker.style.display = "none";
+		btnPicker.disabled = true;
 
 	}
 }

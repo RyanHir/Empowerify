@@ -45,7 +45,55 @@ function restore() {
             items.colorD);
     });
 }
+
+function exportData() {
+    save();
+    var defaultColorA = "#000000";
+    var defaultColorB = "#000000";
+    chrome.storage.local.get({
+        colorA: defaultColorA,
+        colorB: defaultColorB,
+        colorC: defaultColorA,
+        colorD: defaultColorB
+    },
+    function(items) {
+        const exportJSON = {
+            background: {
+                body: items.colorA,
+                text: items.colorC
+            },
+            foreground: {
+                body: items.colorB,
+                text: items.colorD
+            }
+        };
+        document.getElementById('exportText').value = JSON.stringify(exportJSON);
+    });
+}
+
+function importData() {
+    const importJSONRaw = document.getElementById('exportText').value;
+    if (importJSONRaw == null || importJSONRaw == "") {
+        console.warn("Text box empty");
+        return;
+    }
+    const importJSON = JSON.parse(importJSONRaw);
+    chrome.storage.local.set({
+        colorA: importJSON.background.body,
+        colorB: importJSON.foreground.body,
+        colorC: importJSON.background.text,
+        colorD: importJSON.foreground.text
+    }, function() {
+        console.log("import complete");
+        restore();
+    });
+}
+
 document.getElementById('save').addEventListener('click',
     save);
+document.getElementById('export').addEventListener('click',
+    exportData);
+document.getElementById('import').addEventListener('click',
+    importData);
 document.addEventListener('DOMContentLoaded', restore);
 document.addEventListener('change', preview);

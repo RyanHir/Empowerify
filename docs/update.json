@@ -96,6 +96,10 @@
 				{
 					"version": "2.5.0",
 					"update_link": "https://github.com/RyanHir/Empowerify/releases/download/2.5.0/empowerify-2.5.0-fx.xpi"
+				},
+				{
+					"version": "3.0.0",
+					"update_link": "https://github.com/RyanHir/Empowerify/releases/download/3.0.0/empowerify-3.0.0-fx.xpi"
 				}
 			]
 		}

@@ -60,22 +60,20 @@ chrome.tabs.onUpdated.addListener(function(tab) {
 		}
 
 		currentpath = temp.pathname + temp.search;
+		console.group("Background");
+		if (currentpath == "/iFrame.aspx?iCtrl=PLAYLIST_HOME_CLASS") {
+			var timeToSetCss = cssImport("old");
+			console.log("Took " + timeToSetCss + " Milisecconds to set User Theme");
+		} else if (currentpath == "/iFrame.aspx?iCtrl=STUDENT_BASE_HOME_CONTROL") {
+			var timeToSetCss = cssImport("new");
+			console.log("Took " + timeToSetCss + " Milisecconds to set User Theme");
+		} else if (currentpath == "/default.aspx?LOAD_PAGE=true") {
+			var timeToSetCss = cssImport("login");
+			console.log("Took " + timeToSetCss + " Milisecconds to set User Theme");
+		}
+		console.log("Took " + timeToGetData + " Miliseconds to get User Data");
+		console.groupEnd();
 	});
-
-
-	console.group("Background");
-	if (currentpath == "/iFrame.aspx?iCtrl=PLAYLIST_HOME_CLASS") {
-		var timeToSetCss = cssImport("old");
-		console.log("Took " + timeToSetCss + " Milisecconds to set User Theme");
-	} else if (currentpath == "/iFrame.aspx?iCtrl=STUDENT_BASE_HOME_CONTROL") {
-		var timeToSetCss = cssImport("new");
-		console.log("Took " + timeToSetCss + " Milisecconds to set User Theme");
-	} else if (currentpath == "/default.aspx?LOAD_PAGE=true") {
-		var timeToSetCss = cssImport("login");
-		console.log("Took " + timeToSetCss + " Milisecconds to set User Theme");
-	}
-	console.log("Took " + timeToGetData + " Miliseconds to get User Data");
-	console.groupEnd();
 });
 
 function interceptRequest(request) {
